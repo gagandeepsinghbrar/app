@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Server Example</title>
+</head>
+<body>
+    <h1>Postgres Practice</h1>
+    <form id="itemForm">
+        <label for="itemName">Enter item name:</label>
+        <input type="text" id="itemName" name="name">
+        <button onclick="handleClick(event)">Submit</button>
+        <button onclick="getLatest(event)">Get Latest</button>
+        <div id="container">
+        </div>
+    </form>
+    <script>
+        const container = document.getElementById("container");
+
+        window.onload = function() {
+            getLatest();
+        }
+
+        function getLatest(e) {
+            e && e.preventDefault();
+            fetch('/items')
+            .then(res => res.json())
+            .then(results => {
+                if (results) {
+                    renderItems(results);
+                }
+            })
+        }
+
+        const name = document.getElementById('itemName');
+
+        function renderItems(results) {
+            container.innerHTML = '';
+            for (result of results) {
+                const para = document.createElement("p");
+                const node = document.createTextNode(result.name);
+                para.appendChild(node);
+                container.appendChild(para);
+            }
+        }
+
+        function handleClick(e) {
+           e.preventDefault();
+           const item = name.value;
+                // Use Fetch API to send the POST request
+                fetch("/items", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ name: item })
+                })
+                .then(response => response.text()) // or .json() if your server responds with JSON
+                .then(data => {
+                    name.value = '';
+                    getLatest();
+                    // You can also do something upon successful submission, like displaying a message
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</body>
+</html>
+
