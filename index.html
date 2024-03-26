@@ -7,66 +7,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form id="itemForm">
-        <p> Website under construction </p>
-        <!-- <label for="itemName">What I want for dinner:</label> -->
-        <!-- <input type="text" id="itemName" name="name"> -->
-        <!-- <button onclick="handleClick(event)">Submit</button>
-        <div id="container">
-        </div> -->
-    </form>
-    <script>
-        const container = document.getElementById("container");
-
-        window.onload = function() {
-            getLatest();
-        }
-
-        function getLatest(e) {
-            e && e.preventDefault();
-            fetch('/items')
-            .then(res => res.json())
-            .then(results => {
-                if (results) {
-                    renderItems(results);
-                }
-            })
-        }
-
-        const name = document.getElementById('itemName');
-
-        function renderItems(results) {
-            container.innerHTML = '';
-            for (result of results) {
-                const para = document.createElement("p");
-                const node = document.createTextNode(result.name);
-                para.appendChild(node);
-                container.appendChild(para);
-            }
-        }
-
-        function handleClick(e) {
-           e.preventDefault();
-           const item = name.value;
-                // Use Fetch API to send the POST request
-                fetch("/items", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({ name: item })
-                })
-                .then(response => response.text()) // or .json() if your server responds with JSON
-                .then(data => {
-                    name.value = '';
-                    getLatest();
-                    // You can also do something upon successful submission, like displaying a message
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
-        }
-    </script>
+    <div id="quiz-container">
+    <div id="question"></div>
+    <div id="choices"></div>
+    <button id="back">Back</button>
+    <button id="next">Next</button>
+    <button id="submit" style="display:none;">Submit</button>
+    <div id="timer"></div>
+</div>
+<div id="result" style="display:none;"></div>
+<script src="script.js"></script>
 </body>
 </html>
 
