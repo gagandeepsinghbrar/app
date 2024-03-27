@@ -53,7 +53,7 @@ app.get('/results/:id', async (req, res) => {
   const { id } = req.params;
 
   try {
-    const query = 'SELECT result_data, taken_at FROM quiz_results WHERE id = $1';
+    const query = 'SELECT result_data FROM quiz_results WHERE id = $1';
     const result = await pool.query(query, [id]);
 
     if (result.rows.length > 0) {
