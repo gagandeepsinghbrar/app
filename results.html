@@ -43,7 +43,7 @@
             });
             const buttons = document.getElementsByClassName('xx');
             for(var i=0;i<buttons.length;i++) {
-                buttons[i].addEventListener(getResult)
+                buttons[i].addEventListener('click', getResult)
             }
           })
           .catch(error => console.error('Error fetching quiz results:', error));
