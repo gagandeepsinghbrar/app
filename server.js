@@ -50,25 +50,64 @@ app.get('/results', async (req, res) => {
     res.status(500).json({ message: 'Internal server error' });
   }
 });
+const baseURL = 'http://localhost:3000'; // Define the base URL
 
-app.get('/generate_pdf/:id', async (req, res) => {
-  try {
-      const id = req.params.id;
+app.get('/generate_pdf/:id', (req, res) => {
+  const id = req.params.id;
+  // Command to execute the Python script
+  const pythonScript = 'generate_pdf.py'
+  
+  const args = [id]; 
 
-      // Make a request to the Flask server to generate the PDF
-      const response = await axios.get(`generate_pdf/${id}`, {
-          responseType: 'arraybuffer'
-      });
+  // Spawn the Python script as a child process
+  const pythonProcess = spawn('python3', [pythonScript, ...args]);
 
-      // Send the PDF data as a response
-      res.set('Content-Type', 'application/pdf');
-      res.set('Content-Disposition', 'attachment; filename="quiz_results.pdf"');
-      res.send(response.data);
-  } catch (error) {
-      console.error('Error:', error);
-      res.status(500).send('Internal Server Error');
-  }
+  // Capture output from the Python script
+  let pdfData = '';
+
+  pythonProcess.stdout.on('data', (data) => {
+      pdfData += data;
+  });
+
+  pythonProcess.stderr.on('data', (data) => {
+      console.error(`Error from Python script: ${data}`);
+  });
+
+  // Handle completion of the Python script
+  pythonProcess.on('close', (code) => {
+      console.log(`Python script exited with code ${code}`);
+      
+      // Assuming the Python script directly outputs PDF content
+      if (code === 0 && pdfData) {
+          // Send the PDF data as a response
+          res.set('Content-Type', 'application/pdf');
+          res.set('Content-Disposition', 'inline; filename="generated.pdf"');
+          res.send(pdfData);
+      } else {
+          res.status(500).send('Error generating PDF');
+      }
+  });
 });
+
+// app.get('/generate_pdf/:id', async (req, res) => {
+//   try {
+//       const id = req.params.id;
+//       console.log(id)
+//       console.log("____")
+//       // Make a request to the Flask server to generate the PDF
+//       const response = await axios.get(`${baseURL}/generate_pdf/${id}`, {
+//           responseType: 'arraybuffer'
+//       });
+
+//       // Send the PDF data as a response
+//       res.set('Content-Type', 'application/pdf');
+//       res.set('Content-Disposition', 'attachment; filename="quiz_results.pdf"');
+//       res.send(response.data);
+//   } catch (error) {
+//       console.error('Error:', error);
+//       res.status(500).send('Internal Server Error');
+//   }
+// });
 
 
 app.post('/submit-quiz', async (req, res) => {

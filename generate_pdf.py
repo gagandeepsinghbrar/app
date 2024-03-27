@@ -1,7 +1,7 @@
 import psycopg2
 import json
-from flask import Flask, send_file
 from io import BytesIO
+import sys
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
@@ -10,7 +10,10 @@ from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
-app = Flask(__name__)
+log = open('logging.txt', 'a')
+
+def logger(text):
+    log.write(text + "\n")
 
 styles = getSampleStyleSheet()
 
@@ -40,37 +43,11 @@ def fetch_quiz_results(id):
 
     return result_data
 
-def generate_pdf_document(result_data):
-    # Create an in-memory buffer to hold the document data
-    buffer = BytesIO()
-
-    # Create a SimpleDocTemplate
-    doc = SimpleDocTemplate(buffer, pagesize=letter)
-    styles = getSampleStyleSheet()
-
-    # Build content for the PDF
-    content = []
-
-    # Add questions to the PDF content
-    for question_data in result_data:
-        question = question_data[0]  # Assuming the question is the first element in each row
-        content.append(Paragraph(question, styles['Title']))
-
-        # You can add more details from the database to the PDF content as needed
-
-    # Build the PDF document
-    doc.build(content)
-
-    # Get the PDF data from the buffer
-    pdf_data = buffer.getvalue()
-
-    # Close the buffer
-    buffer.close()
-
-    return pdf_data
-    
-@app.route('/generate_pdf/<int:id>', methods=['GET'])
 def generate_pdf(id):
+
+    logger("got id" + str(id))
+
+
     results_data = fetch_quiz_results(id)
     filename = "result" + str(id) + ".pdf"
 
@@ -85,10 +62,13 @@ def generate_pdf(id):
     # Define content for the PDF
     content = []
 
-    json_string = result_data[0]  # Extract the JSON string from the tuple
+    json_string = results_data[0]  # Extract the JSON string from the tuple
 
     # Ensure that json_string is a string
     data = json.loads(json.loads(json_string));
+
+    logger("got data items: " + str(len(data)))
+
     for i, item in enumerate(data, 1):
 
         # Extract properties from result_data
@@ -126,15 +106,14 @@ def generate_pdf(id):
 
     # Build the PDF document
     doc.build(content)
-
+    logger("built")
     pdf_data = buffer.getvalue()
-
+    logger("got value")
     buffer.close()
-    return send_file(
-        BytesIO(pdf_data),
-        attachment_filename='quiz_results.pdf',
-        as_attachment=True
-    )
-    print('done')
+    logger("closed")
+    return pdf_data
 
-
+if __name__ == "__main__":
+    # Read the command-line argument passed to the script
+    argument = sys.argv[1] if len(sys.argv) > 1 else None
+    generate_pdf(argument)
