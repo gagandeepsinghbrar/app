@@ -30,6 +30,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'results.html'));
+});
+
+
 app.post('/submit-quiz', async (req, res) => {
   try {
     const { result_data, timestamp } = req.body;

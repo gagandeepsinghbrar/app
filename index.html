@@ -3,18 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mithis Page</title>
+    <title>PSI Exams</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="quiz-container">
-    <div id="question"></div>
-    <div id="choices"></div>
-    <button id="back">Back</button>
-    <button id="next">Next</button>
-    <button id="submit" style="display:none;">Submit</button>
-    <div id="timer"></div>
-</div>
+
+    <div class="container">
+        <div class="wrapper">
+            <div id="quiz-container">
+            <div id="mark-icon" style="color:orange">M</div>
+            <div id="question"></div>
+            <div id="choices"></div>
+            <button id="back">Back</button>
+            <button id="next">Next</button>
+            <button id="submit_exam"> submit </button>
+        </div>
+        <div class="timer">
+            <div id="timer"></div>
+            <button id="marker"> Mark </button>
+        </div>
+        <div class="side">
+             <img src="blob.png" id="psi">
+        </div>
+    </div>
+
 <div id="result" style="display:none;"></div>
 <div id="pass_or_fail" style="display:none;"></div>
 <script src="script.js"></script>
