@@ -78,7 +78,7 @@ const questions = [
 ]
 
 const marker = document.getElementById("mark-icon")
-
+let interval;
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -146,7 +146,8 @@ function prepareAndSubmitResults() {
         alert("Please answer all questions before submitting.");
         return;
     }
-
+    // clear timer
+    clearInterval(interval)
     // Example: Sending results to a server
     fetch('/submit-quiz', {
         method: 'POST',
@@ -232,7 +233,7 @@ function backQuestion() {
 function startTimer(duration) {
     const timerElement = document.getElementById("timer");
     let minutes, seconds;
-    const interval = setInterval(function () {
+    interval = setInterval(function () {
         minutes = parseInt(duration / 60, 10);
         seconds = parseInt(duration % 60, 10);
 
