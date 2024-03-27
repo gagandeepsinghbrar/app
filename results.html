@@ -5,12 +5,12 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<title>PSI Exam Results</title>
 			</head>
-			<body>
-				<div class="container">
-					<h1>Quiz Results</h1>
-					<div id="quizResults"></div>
-				</div>
-				<script>
+    <body>
+        <div class="container">
+            <h1>Quiz Results</h1>
+            <div id="quizResults"></div>
+        </div>
+        <script>
         const container = document.getElementById('container');
         const quizResults = document.getElementById('quizResults');
         function getResult(e) {
@@ -62,7 +62,7 @@
               resultElement.innerHTML = `
                 
 					<p>Exam taken at: ${takenAt}</p>
-					<button data-id="${/results/result.id}" class="xx">Test ID ${result.id}</button>
+					<button data-id="/results/${result.id}" class="xx">Test ID ${result.id}</button>
               `;
             
               quizResults.appendChild(resultElement);
