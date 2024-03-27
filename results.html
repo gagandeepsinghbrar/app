@@ -15,15 +15,34 @@
         const quizResults = document.getElementById('quizResults');
         function getResult(e) {
             const id = e.target.dataset.id;
-            if (id) {
-            fetch(id)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                container.style.display = 'none';
-            })
-            }
-            
+            // Make an AJAX request to your Express route
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', id, true);
+            xhr.responseType = 'blob'; // Response type is blob for file downloads
+
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    // Create a temporary anchor element
+                    const a = document.createElement('a');
+                    const url = window.URL.createObjectURL(xhr.response);
+                    a.href = url;
+                    a.download = `quiz_results_${id}.pdf`; // Set the filename for download
+                    document.body.appendChild(a);
+                    a.click();
+
+                    // Clean up
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+                } else {
+                    console.error('Failed to download quiz results');
+                }
+            };
+
+            xhr.onerror = function() {
+                console.error('Error occurred during download');
+            };
+
+            xhr.send();
         }
 
         // Fetch quiz results data from the server
@@ -43,7 +62,7 @@
               resultElement.innerHTML = `
                 
 					<p>Exam taken at: ${takenAt}</p>
-					<button data-id="/results/${result.id}" class="xx">Test ID ${result.id}</button>
+					<button data-id="${/results/result.id}" class="xx">Test ID ${result.id}</button>
               `;
             
               quizResults.appendChild(resultElement);

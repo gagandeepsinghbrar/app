@@ -48,23 +48,24 @@ app.get('/results', async (req, res) => {
   }
 });
 
-// Express route to handle the query
-app.get('/results/:id', async (req, res) => {
-  const { id } = req.params;
 
-  try {
-    const query = 'SELECT result_data FROM quiz_results WHERE id = $1';
-    const result = await pool.query(query, [id]);
+app.get('/results/:id', (req, res) => {
+  const id = req.params.id;
 
-    if (result.rows.length > 0) {
-      res.json(result.rows[0]); // Return the result_data and taken_at as JSON
-    } else {
-      res.status(404).json({ message: 'Quiz result not found' });
-    }
-  } catch (error) {
-    console.error('Error executing query:', error);
-    res.status(500).json({ message: 'Internal server error' });
-  }
+  // Invoke Python script
+  const pythonProcess = spawn('python', ['generate_pdf.py', id]);
+
+  pythonProcess.stdout.on('data', (data) => {
+      // Data contains PDF file path or URL
+      const pdfPath = data.toString().trim();
+      // Trigger download of the PDF file
+      res.download(pdfPath);
+  });
+
+  pythonProcess.stderr.on('data', (data) => {
+      console.error(`Error from Python script: ${data}`);
+      res.status(500).send('Internal Server Error');
+  });
 });
 
 app.post('/submit-quiz', async (req, res) => {
