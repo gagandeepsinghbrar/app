@@ -45,7 +45,7 @@
                 
 
                 // Make a GET request to the Express route to trigger PDF download
-                const response = await fetch(`generate_pdf/${id}`);
+                const response = await fetch(id);
 
                 // Convert response to Blob
                 const blob = await response.blob();
