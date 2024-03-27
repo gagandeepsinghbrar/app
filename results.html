@@ -14,10 +14,15 @@
         const container = document.getElementById('container');
         const quizResults = document.getElementById('quizResults');
         function getResult(e) {
-            const id = e.target.id;
+            const id = e.target.dataset.id;
             if (id) {
+            fetch(id)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
                 container.style.display = 'none';
-            }
+            });
+            
         }
 
         // Fetch quiz results data from the server
