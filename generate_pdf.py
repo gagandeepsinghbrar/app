@@ -116,4 +116,6 @@ def generate_pdf(id):
 if __name__ == "__main__":
     # Read the command-line argument passed to the script
     argument = sys.argv[1] if len(sys.argv) > 1 else None
-    generate_pdf(argument)
+    pdf_content = generate_pdf(argument)
+    sys.stdout.buffer.write(pdf_content)
+    sys.stdout.flush()
