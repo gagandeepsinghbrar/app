@@ -638,6 +638,7 @@ function displayQuestion() {
     marker.style.visibility = 'hidden';
     const questionObj = questions[currentQuestionIndex];
     const questionNumber = String(currentQuestionIndex + 1) + '. ';
+    document.getElementById('of').innerHTML = questionNumber + 'of ' + String(questions.length);
     document.getElementById("question").textContent = questionNumber + questionObj.question;
     const choicesContainer = document.getElementById("choices");
     choicesContainer.innerHTML = ""; // Clear previous choices
