@@ -1,3 +1,4 @@
+console.log('hello world')
 const questions = [
     {
         question: "A patient arrives at your dental office and requests to see their dental records. What should you do?",
