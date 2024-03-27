@@ -70,6 +70,30 @@ app.get('/results/:id', (req, res) => {
   });
 });
 
+app.get('/generate_pdf', (req, res) => {
+  const pythonProcess = spawn('python', ['generate_pdf.py', 'arguments']);
+  
+  // Handle stdout, stderr, and exit events as needed
+
+  pythonProcess.stdout.on('data', (data) => {
+      const pdfPath = data.toString().trim();
+      res.send(pdfPath); // Send back the path to the generated PDF
+  });
+
+  pythonProcess.stderr.on('data', (data) => {
+      console.error(`Error from Python script: ${data}`);
+      res.status(500).send(`Error from Python script: ${data}`); // Send the error message back in the response
+  });
+
+  pythonProcess.on('exit', (code) => {
+      if (code !== 0) {
+          console.error(`Python script exited with code ${code}`);
+          res.status(500).send(`Python script exited with code ${code}`);
+      }
+  });
+});
+
+
 app.post('/submit-quiz', async (req, res) => {
   try {
     const { result_data, timestamp } = req.body;
