@@ -34,8 +34,8 @@ app.post('/submit-quiz', async (req, res) => {
   try {
     const { results, timestamp } = req.body;
     const resultData = JSON.stringify(results); // Ensure your data is in JSON string format
-    const queryText = 'INSERT INTO quiz_results(taken_at, result_data) VALUES($1, $2) RETURNING id';
-    const queryParams = [timestamp, resultData];
+    const queryText = 'INSERT INTO quiz_results(result_data) VALUES($1) RETURNING id';
+    const queryParams = [resultData];
     
     const dbRes = await pool.query(queryText, queryParams);
     res.status(201).send({ message: 'Quiz results saved', quizResultId: dbRes.rows[0].id });
