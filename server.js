@@ -49,3 +49,9 @@ app.post('/submit-quiz', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+// CREATE TABLE quiz_results (
+//     id SERIAL PRIMARY KEY,
+//     result_data TEXT, -- Store quiz results as a JSON string
+//     taken_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP
+// );

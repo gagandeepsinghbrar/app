@@ -30,9 +30,11 @@ let currentQuestionIndex = 0;
 let score = 0;
 let timer = 60 * 60; // 60 minutes
 let ranOutOfTime = false;
+let allAnswered = false;
 function displayQuestion() {
     const questionObj = questions[currentQuestionIndex];
-    document.getElementById("question").textContent = questionObj.question;
+    const questionNumber = String(currentQuestionIndex + 1) + '.';
+    document.getElementById("question").textContent = questionNumber + questionObj.question;
     const choicesContainer = document.getElementById("choices");
     choicesContainer.innerHTML = ""; // Clear previous choices
     questionObj.choices.forEach((choice, index) => {
@@ -57,7 +59,7 @@ function displayQuestion() {
 
 function prepareAndSubmitResults() {
     let done = true;
-    const allAnswered = questions.every(q => !!q.answered);
+    allAnswered = questions.every(q => !!q.answered);
     if (!ranOutOfTime && !allAnswered) {     
         alert("Please answer all questions before submitting.");
         return;
@@ -78,11 +80,17 @@ function prepareAndSubmitResults() {
 
 function showResult() {
     prepareAndSubmitResults();
+    showScore()
+}
+
+function showScore() {
+    if (!ranOutOfTime && !allAnswered) {
+        return;
+    }
     document.getElementById("quiz-container").style.display = "none";
     document.getElementById("result").style.display = "block";
     document.getElementById("result").textContent = `Your score is: ${score} / 50`;
 }
-
 function nextQuestion() {
     const selectedChoice = document.querySelector('input[name="choice"]:checked');
     if (selectedChoice && selectedChoice.value === questions[currentQuestionIndex].answer) {
@@ -92,6 +100,7 @@ function nextQuestion() {
     if (currentQuestionIndex < questions.length) {
         displayQuestion();
     } else {
+        // last page.
         showResult();
     }
 }
