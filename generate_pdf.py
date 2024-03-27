@@ -39,17 +39,50 @@ def fetch_quiz_results(id):
 
     return result_data
 
-def generate_pdf(result_data, id):
-    doc = SimpleDocTemplate("result" + str(id) + ".pdf", pagesize=letter, title='Results')
+def generate_pdf_document(result_data):
+    # Create an in-memory buffer to hold the document data
+    buffer = BytesIO()
+
+    # Create a SimpleDocTemplate
+    doc = SimpleDocTemplate(buffer, pagesize=letter)
+    styles = getSampleStyleSheet()
+
+    # Build content for the PDF
+    content = []
+
+    # Add questions to the PDF content
+    for question_data in result_data:
+        question = question_data[0]  # Assuming the question is the first element in each row
+        content.append(Paragraph(question, styles['Title']))
+
+        # You can add more details from the database to the PDF content as needed
+
+    # Build the PDF document
+    doc.build(content)
+
+    # Get the PDF data from the buffer
+    pdf_data = buffer.getvalue()
+
+    # Close the buffer
+    buffer.close()
+
+    return pdf_data
     
+@app.route('/generate_pdf/<int:id>', methods=['GET'])
+def generate_pdf(r, id):
+    results_data = fetch_quiz_results(id)
+    filename = "result" + str(id) + ".pdf"
+
+    buffer = BytesIO()  
+    doc = SimpleDocTemplate(buffer, pagesize=letter, title=filename)
     # Modify the font size of the Heading1 style
     styles['Heading1'].fontSize = 13
 
     # Modify the font size of the Heading2 style
     styles['Heading2'].fontSize = 12
+
     # Define content for the PDF
     content = []
-
 
     json_string = result_data[0]  # Extract the JSON string from the tuple
 
@@ -92,6 +125,15 @@ def generate_pdf(result_data, id):
 
     # Build the PDF document
     doc.build(content)
+
+    pdf_data = buffer.getvalue()
+
+    buffer.close()
+    return send_file(
+        BytesIO(pdf_data),
+        attachment_filename='quiz_results.pdf',
+        as_attachment=True
+    )
     print('done')
 
 if __name__ == "__main__":
