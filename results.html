@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSI Exam Results</title>
-</head>
-<body>
-    <div class="container">
-        <h1>Quiz Results</h1>
-        <div id="quizResults"></div>
-    </div>
-      <script>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>PSI Exam Results</title>
+			</head>
+			<body>
+				<div class="container">
+					<h1>Quiz Results</h1>
+					<div id="quizResults"></div>
+				</div>
+				<script>
         const container = document.getElementById('container');
         const quizResults = document.getElementById('quizResults');
         function getResult(e) {
@@ -21,7 +21,8 @@
             .then(data => {
                 console.log(data);
                 container.style.display = 'none';
-            });
+            })
+            }
             
         }
 
@@ -40,19 +41,22 @@
               const takenAt = new Date(result.taken_at).toLocaleString();
     
               resultElement.innerHTML = `
-                <p>Exam taken at: ${takenAt}</p>
-                <button data-id="/results/${result.id}" class="xx">Test ID ${result.id}</button>
+                
+					<p>Exam taken at: ${takenAt}</p>
+					<button data-id="/results/${result.id}" class="xx">Test ID ${result.id}</button>
               `;
             
               quizResults.appendChild(resultElement);
             });
             const buttons = document.getElementsByClassName('xx');
-            for(var i=0;i<buttons.length;i++) {
+            for(var i=0;i
+					<buttons.length;i++) {
                 buttons[i].addEventListener('click', getResult)
             }
           })
           .catch(error => console.error('Error fetching quiz results:', error));
-      </script>
-</body>
-</html>
+      
+					</script>
+				</body>
+			</html>
 
