@@ -10,6 +10,7 @@ from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
+app = Flask(__name__)
 
 styles = getSampleStyleSheet()
 
@@ -69,7 +70,7 @@ def generate_pdf_document(result_data):
     return pdf_data
     
 @app.route('/generate_pdf/<int:id>', methods=['GET'])
-def generate_pdf(r, id):
+def generate_pdf(id):
     results_data = fetch_quiz_results(id)
     filename = "result" + str(id) + ".pdf"
 
@@ -136,6 +137,4 @@ def generate_pdf(r, id):
     )
     print('done')
 
-if __name__ == "__main__":
-    generate_pdf(fetch_quiz_results(12), 12)
 
