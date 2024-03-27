@@ -26,13 +26,14 @@ return `${dayOfWeek}, ${examDate.toLocaleTimeString('en-US', options)}`;
 async function getResult(e) {
     const id = e.target.dataset.id;
     try {
+        const onlyId = id.split('/')[2];
         const response = await fetch(id);
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
         window.open(url, '_blank');
         const link = document.createElement('a');
         link.href = url;
-        link.setAttribute('download', 'quiz_results.pdf');
+        link.setAttribute('download', `dental_quiz${onlyId}.pdf`);
         document.body.appendChild(link);
         link.click();
 

@@ -89,27 +89,6 @@ app.get('/generate_pdf/:id', (req, res) => {
   });
 });
 
-// app.get('/generate_pdf/:id', async (req, res) => {
-//   try {
-//       const id = req.params.id;
-//       console.log(id)
-//       console.log("____")
-//       // Make a request to the Flask server to generate the PDF
-//       const response = await axios.get(`${baseURL}/generate_pdf/${id}`, {
-//           responseType: 'arraybuffer'
-//       });
-
-//       // Send the PDF data as a response
-//       res.set('Content-Type', 'application/pdf');
-//       res.set('Content-Disposition', 'attachment; filename="quiz_results.pdf"');
-//       res.send(response.data);
-//   } catch (error) {
-//       console.error('Error:', error);
-//       res.status(500).send('Internal Server Error');
-//   }
-// });
-
-
 app.post('/submit-quiz', async (req, res) => {
   try {
     const { result_data, timestamp } = req.body;
