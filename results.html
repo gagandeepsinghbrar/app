@@ -38,36 +38,35 @@
     const dayOfWeek = days[examDate.getDay()];
     return `${dayOfWeek}, ${examDate.toLocaleTimeString('en-US', options)}`;
 }
-        function getResult(e) {
+        async function getResult(e) {
             const id = e.target.dataset.id;
-            // Make an AJAX request to your Express route
-            const xhr = new XMLHttpRequest();
-            xhr.open('GET', id, true);
-            xhr.responseType = 'blob'; // Response type is blob for file downloads
+            try {
+                // Replace `id` with the actual ID of the quiz results
+                
 
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    // Create a temporary anchor element
-                    const a = document.createElement('a');
-                    const url = window.URL.createObjectURL(xhr.response);
-                    a.href = url;
-                    a.download = `quiz_results_${id}.pdf`; // Set the filename for download
-                    document.body.appendChild(a);
-                    a.click();
+                // Make a GET request to the Express route to trigger PDF download
+                const response = await fetch(`generate_pdf/${id}`);
 
-                    // Clean up
-                    window.URL.revokeObjectURL(url);
-                    document.body.removeChild(a);
-                } else {
-                    console.error('Failed to download quiz results');
-                }
-            };
+                // Convert response to Blob
+                const blob = await response.blob();
 
-            xhr.onerror = function() {
-                console.error('Error occurred during download');
-            };
+                // Create a URL for the Blob
+                const url = window.URL.createObjectURL(blob);
 
-            xhr.send();
+                // Create a temporary link element to trigger download
+                const link = document.createElement('a');
+                link.href = url;
+                link.setAttribute('download', 'quiz_results.pdf');
+                document.body.appendChild(link);
+                link.click();
+
+                // Cleanup
+                document.body.removeChild(link);
+                window.URL.revokeObjectURL(url);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+            
         }
 
         // Fetch quiz results data from the server
@@ -87,7 +86,7 @@
               resultElement.innerHTML = `
                 
 					<p>Exam taken : ${takenAt}</p> 
-					<button data-id="/results/${result.id}" class="xx">Exam # ${result.id}</button>
+					<button data-id="/generate_pdf/${result.id}" class="xx">Exam # ${result.id}</button>
               `;
             
               quizResults.appendChild(resultElement);

@@ -1,5 +1,6 @@
 const express = require('express');
 const { spawn } = require('child_process');
+const axios = require('axios');
 
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -50,47 +51,23 @@ app.get('/results', async (req, res) => {
   }
 });
 
+app.get('/generate_pdf/:id', async (req, res) => {
+  try {
+      const id = req.params.id;
 
-app.get('/results/:id', (req, res) => {
-  const id = req.params.id;
+      // Make a request to the Flask server to generate the PDF
+      const response = await axios.get(`generate_pdf/${id}`, {
+          responseType: 'arraybuffer'
+      });
 
-  // Invoke Python script
-  const pythonProcess = spawn('python3', ['generate_pdf.py', id]);
-
-  pythonProcess.stdout.on('data', (data) => {
-      // Data contains PDF file path or URL
-      const pdfPath = data.toString().trim();
-      // Trigger download of the PDF file
-      res.download(pdfPath);
-  });
-
-  pythonProcess.stderr.on('data', (data) => {
-      console.error(`Error from Python script: ${data}`);
+      // Send the PDF data as a response
+      res.set('Content-Type', 'application/pdf');
+      res.set('Content-Disposition', 'attachment; filename="quiz_results.pdf"');
+      res.send(response.data);
+  } catch (error) {
+      console.error('Error:', error);
       res.status(500).send('Internal Server Error');
-  });
-});
-
-app.get('/generate_pdf', (req, res) => {
-  const pythonProcess = spawn('python', ['generate_pdf.py', 'arguments']);
-  
-  // Handle stdout, stderr, and exit events as needed
-
-  pythonProcess.stdout.on('data', (data) => {
-      const pdfPath = data.toString().trim();
-      res.send(pdfPath); // Send back the path to the generated PDF
-  });
-
-  pythonProcess.stderr.on('data', (data) => {
-      console.error(`Error from Python script: ${data}`);
-      res.status(500).send(`Error from Python script: ${data}`); // Send the error message back in the response
-  });
-
-  pythonProcess.on('exit', (code) => {
-      if (code !== 0) {
-          console.error(`Python script exited with code ${code}`);
-          res.status(500).send(`Python script exited with code ${code}`);
-      }
-  });
+  }
 });
 
 
