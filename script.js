@@ -14,17 +14,31 @@ const questions = [
         choices: ["William Shakespeare", "Leo Tolstoy", "Mark Twain", "Charles Dickens"],
         answer: "William Shakespeare"
     },
-    {
-        question: "What is the chemical symbol for gold?",
-        choices: ["Au", "Ag", "Pb", "Fe"],
-        answer: "Au"
-    },
-    {
-        question: "Which element has the atomic number 8?",
-        choices: ["Oxygen", "Hydrogen", "Nitrogen", "Carbon"],
-        answer: "Oxygen"
-    }
 ];
+
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function genNoScoreIndices() {
+    const randomNumbers = [];
+    const minNumber = 0;
+    const maxNumber = 59;
+    const numberOfRandomNumbers = 10;
+
+    for (let i = 0; i < numberOfRandomNumbers; i++) {
+        randomNumbers.push(getRandomNumber(minNumber, maxNumber));
+    } 
+    return randomNumbers;
+}
+
+
+if (isPSIExam()) {
+    const indices = genNoScoreIndices();
+    for(i in indices) {
+        questions[i].noScore = true;
+    }
+}
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -43,6 +57,9 @@ function displayQuestion() {
         radio.type = "radio";
         radio.name = "choice";
         radio.value = choice;
+        if (questionObj.answered && choice === questionObj.answered) {
+            radio.checked = true;
+        }
         label.appendChild(radio);
         label.append(choice);
 
@@ -78,9 +95,19 @@ function prepareAndSubmitResults() {
     .catch((error) => console.error('Error:', error));
 }
 
-function showResult() {
+function showResult(fromLastPage) {
+    if (fromLastPage) {
+        currentQuestionIndex--;
+    }
     prepareAndSubmitResults();
     showScore()
+}
+
+function scorableQuestions() {
+    if (!isPSIExam()) return questions.length
+    else {
+        return questions.filter(q => q.noScore).length;
+    }
 }
 
 function showScore() {
@@ -89,11 +116,28 @@ function showScore() {
     }
     document.getElementById("quiz-container").style.display = "none";
     document.getElementById("result").style.display = "block";
-    document.getElementById("result").textContent = `Your score is: ${score} / 50`;
+    document.getElementById("result").textContent = `Your score is: ${score} / ${scorableQuestions()}`;
+    showPassFailStatus();
 }
+
+function showPassFailStatus() {
+        const pof = document.getElementById("pass_or_fail");
+        pof.style.display = "block";
+        const passOrFail = (((score/questions.length)*100) >= 75) ? "PASS" : "FAIL";
+        pof.textContent = passOrFail;
+        pof.style.color = passOrFail === "PASS" ? "green": "red";
+
+}
+
+function isPSIExam() {
+    return questions.length === 60;
+}
+
 function nextQuestion() {
     const selectedChoice = document.querySelector('input[name="choice"]:checked');
-    if (selectedChoice && selectedChoice.value === questions[currentQuestionIndex].answer) {
+    if (selectedChoice
+     && selectedChoice.value === questions[currentQuestionIndex].answer
+     && !questions[currentQuestionIndex].noScore) {
         score++;
     }
     currentQuestionIndex++;
@@ -101,7 +145,7 @@ function nextQuestion() {
         displayQuestion();
     } else {
         // last page.
-        showResult();
+        showResult(true);
     }
 }
 
