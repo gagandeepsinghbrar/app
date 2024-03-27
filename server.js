@@ -30,10 +30,42 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'results.html'));
+// Serve index.html
+app.get('/tests', (req, res) => {
+  res.sendFile(path.join(__dirname, 'results.html'));
 });
 
+
+app.get('/results', async (req, res) => {
+  try {
+    const query = 'SELECT * FROM quiz_results';
+    const result = await pool.query(query);
+
+    res.json(result.rows); // Return all entries from the quiz_results table as JSON
+  } catch (error) {
+    console.error('Error executing query:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+// Express route to handle the query
+app.get('/results/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const query = 'SELECT result_data, taken_at FROM quiz_results WHERE id = $1';
+    const result = await pool.query(query, [id]);
+
+    if (result.rows.length > 0) {
+      res.json(result.rows[0]); // Return the result_data and taken_at as JSON
+    } else {
+      res.status(404).json({ message: 'Quiz result not found' });
+    }
+  } catch (error) {
+    console.error('Error executing query:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
 
 app.post('/submit-quiz', async (req, res) => {
   try {
