@@ -55,7 +55,7 @@ app.get('/results/:id', (req, res) => {
   const id = req.params.id;
 
   // Invoke Python script
-  const pythonProcess = spawn('python', ['generate_pdf.py', id]);
+  const pythonProcess = spawn('python3', ['generate_pdf.py', id]);
 
   pythonProcess.stdout.on('data', (data) => {
       // Data contains PDF file path or URL
