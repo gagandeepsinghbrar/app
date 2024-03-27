@@ -26,6 +26,21 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.post('/submit-quiz', async (req, res) => {
+  try {
+    const { results, timestamp } = req.body;
+    const resultData = JSON.stringify(results); // Ensure your data is in JSON string format
+    const queryText = 'INSERT INTO quiz_results(taken_at, result_data) VALUES($1, $2) RETURNING id';
+    const queryParams = [timestamp, resultData];
+    
+    const dbRes = await pool.query(queryText, queryParams);
+    res.status(201).send({ message: 'Quiz results saved', quizResultId: dbRes.rows[0].id });
+  } catch (err) {
+    console.error('Error saving quiz results:', err);
+    res.status(500).send({ error: 'Failed to save quiz results' });
+  }
+});
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

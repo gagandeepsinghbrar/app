@@ -1,11 +1,35 @@
 const questions = [
-    { question: "What is 2 + 2?", choices: ["2", "3", "4", "5"], answer: "4" },
-    // Add more questions as needed
+    {
+        question: "What is the capital of France?",
+        choices: ["Paris", "London", "Berlin", "Madrid"],
+        answer: "Paris"
+    },
+    {
+        question: "Which planet is known as the Red Planet?",
+        choices: ["Earth", "Mars", "Jupiter", "Venus"],
+        answer: "Mars"
+    },
+    {
+        question: "Who wrote 'Hamlet'?",
+        choices: ["William Shakespeare", "Leo Tolstoy", "Mark Twain", "Charles Dickens"],
+        answer: "William Shakespeare"
+    },
+    {
+        question: "What is the chemical symbol for gold?",
+        choices: ["Au", "Ag", "Pb", "Fe"],
+        answer: "Au"
+    },
+    {
+        question: "Which element has the atomic number 8?",
+        choices: ["Oxygen", "Hydrogen", "Nitrogen", "Carbon"],
+        answer: "Oxygen"
+    }
 ];
+
 let currentQuestionIndex = 0;
 let score = 0;
 let timer = 60 * 60; // 60 minutes
-
+let ranOutOfTime = false;
 function displayQuestion() {
     const questionObj = questions[currentQuestionIndex];
     document.getElementById("question").textContent = questionObj.question;
@@ -19,11 +43,41 @@ function displayQuestion() {
         radio.value = choice;
         label.appendChild(radio);
         label.append(choice);
+
+        // Add event listener for when the radio button is selected
+        radio.addEventListener('change', function() {
+            questionObj.answered = this.value; // Update the question object with the selected answer
+        });
+        
+        // Append the label and a line break to the choices container
         choicesContainer.appendChild(label);
+        choicesContainer.appendChild(document.createElement("br")); // This adds a line break
     });
 }
 
+function prepareAndSubmitResults() {
+    let done = true;
+    const allAnswered = questions.every(q => !!q.answered);
+    if (!ranOutOfTime && !allAnswered) {     
+        alert("Please answer all questions before submitting.");
+        return;
+    }
+
+    // Example: Sending results to a server
+    fetch('/submit-quiz', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ result_data: JSON.stringify(questions)}),
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch((error) => console.error('Error:', error));
+}
+
 function showResult() {
+    prepareAndSubmitResults();
     document.getElementById("quiz-container").style.display = "none";
     document.getElementById("result").style.display = "block";
     document.getElementById("result").textContent = `Your score is: ${score} / 50`;
@@ -62,6 +116,7 @@ function startTimer(duration) {
         timerElement.textContent = minutes + ":" + seconds;
 
         if (--duration < 0) {
+            ranOutOfTime = true;
             clearInterval(interval);
             showResult();
         }
