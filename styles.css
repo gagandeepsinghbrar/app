@@ -1,44 +1,44 @@
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 .container {
-    padding-left: 15%;
-    padding-top: 10%;
+  padding-left: 15%;
+  padding-top: 10%;
 }
 #quiz-container {
-    margin: 20px;
-    border: 0.3px solid grey;
-    padding: 20px;
-    border-radius: 10px;
+  margin: 20px;
+  border: 0.3px solid grey;
+  padding: 20px;
+  border-radius: 10px;
 }
 #question {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 button {
-    margin: 5px;
+  margin: 5px;
 }
 #choices {
-    padding-top: 4px;
+  padding-top: 4px;
 }
 #choices label {
-    display: inline-block;
-    margin-bottom: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 #timer {
-    margin-top: 20px;
-    font-weight: bold;
+  margin-top: 20px;
+  font-weight: bold;
 }
 .side {
-    float:right;
-    top: 0; /* Align to the top edge of the container */
-    right: 0; /* Align to the right edge of the container */
-    padding-top: 20px;
-    padding-right: 120px;
+  float: right;
+  top: 0; /* Align to the top edge of the container */
+  right: 0; /* Align to the right edge of the container */
+  padding-top: 20px;
+  padding-right: 120px;
 }
 #psi {
-    height: 45px;
-    width: 45px;
+  height: 45px;
+  width: 45px;
 }
 .timer {
-    padding-left: 2%;
+  padding-left: 2%;
 }

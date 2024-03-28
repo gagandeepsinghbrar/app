@@ -1,93 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PSI Exams</title>
     <style>
-        /* Global styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
+      /* Global styles */
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
 
-        .wrapper {
-            display: flex;
-            justify-content: space-between;
-        }
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
 
-        #quiz-container {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+      #quiz-container {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
 
-        #question {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
+      #question {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
 
-        #choices label {
-            display: block;
-            margin-bottom: 10px;
-        }
+      #choices label {
+        display: block;
+        margin-bottom: 10px;
+      }
 
-        .timer {
-            text-align: center;
-        }
+      .timer {
+        text-align: center;
+      }
 
-        #timer {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
+      #timer {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
 
-        .side {
-            flex: 0 0 150px;
-        }
+      .side {
+        flex: 0 0 150px;
+      }
 
-        #psi {
-            width: 100%;
-        }
-
-
+      #psi {
+        width: 100%;
+      }
     </style>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <a href="/tests"> Results page </a>
-        <div class="wrapper">
-            <div id="quiz-container">
-            <div id="mark-icon" style="color:orange">M</div>
-            <div id="question"></div>
-            <div id="choices"></div>
-            <button id="back">Back</button>
-            <button id="next">Next</button>
-            <button id="submit_exam"> submit </button>
+      <a href="/tests" id="results_link"> Results page </a>
+      <div class="wrapper">
+        <div id="quiz-container">
+          <div id="mark-icon" style="color: orange">M</div>
+          <div id="question"></div>
+          <div id="choices"></div>
+          <button id="back">Back</button>
+          <button id="next">Next</button>
+          <button id="submit_exam">submit</button>
         </div>
         <div class="timer">
-            <div id="timer"></div>
-            <button id="marker"> Mark </button>
-            <div id="of"></div>
+          <div id="timer"></div>
+          <button id="marker">Mark</button>
+          <div id="of"></div>
         </div>
         <div class="side">
-             <img src="blob.png" id="psi">
+          <img src="blob.png" id="psi" />
         </div>
+      </div>
+      <div id="result" style="display: none"></div>
+      <div id="pass_or_fail" style="display: none"></div>
+      <script src="exam.js"></script>
     </div>
-
-<div id="result" style="display:none;"></div>
-<div id="pass_or_fail" style="display:none;"></div>
-<script src="exam.js"></script>
-</body>
+  </body>
 </html>
-
