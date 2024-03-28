@@ -1,3 +1,4 @@
+const examNotCorrupted = true;
 const questions = [
     {
         question: "Which of the following is NOT considered unprofessional conduct for a dental professional in California?",
@@ -602,7 +603,31 @@ const questions = [
 ]
 
 
+function checkExamCorrupted() {
+    const atleastOneMatch = question => question.choices.some(choice => choice === question.answer);
+    examNotCorrupted = questions.every(q => !!q.answer 
+        && !!q.choices 
+        && atleastOneMatch(question));
+    if (!examNotCorrupted) {
 
+    }
+}
+
+function logCorrupted() {
+    var no = [];
+    for(indices in questions) {
+
+        const question = questions[indices];
+        const choices = question.choices;
+        const answer = question.answer;
+
+        if (!choices.includes(answer)) {
+            no.push(indices)
+        } 
+        
+    }
+    console.error('Answers are mismatching strings for: ', no)
+}
 
 const marker = document.getElementById("mark-icon")
 let interval;
@@ -818,8 +843,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 // Initialize quiz
-displayQuestion();
-startTimer(timer);
+if (examNotCorrupted) {
+    displayQuestion();
+    startTimer(timer);
+}
+
 
 
 
