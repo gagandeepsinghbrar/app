@@ -725,7 +725,7 @@ function showResult(fromLastPage) {
 function scorableQuestions() {
     if (!isPSIExam()) return questions.length
     else {
-        return questions.filter(q => q.noScore).length;
+        return questions.filter(q => !q.noScore).length;
     }
 }
 
@@ -734,6 +734,7 @@ function showScore() {
         return;
     }
     document.getElementById("quiz-container").style.display = "none";
+    document.getElementById("of").style.display = "none";
     document.getElementById("result").style.display = "block";
     document.getElementById("result").textContent = `Your score is: ${score} / ${scorableQuestions()}`;
     showPassFailStatus();
