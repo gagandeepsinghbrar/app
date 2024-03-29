@@ -1400,19 +1400,36 @@ function prepareAndSubmitResults() {
     alert("Please answer all questions before submitting.");
     return;
   }
-  // clear timer
-  clearInterval(interval);
-  // Example: Sending results to a server
-  fetch("/submit-quiz", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ result_data: JSON.stringify(questions) }),
+  const markedQuestionNumbers = [];
+  const markedOnes = questions.forEach((question, i) => {
+      if (question.marked) {
+        markedQuestionNumbers.push(i + 1);
+      }
   })
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch((error) => console.error("Error:", error));
+  const qs = 'Questions ' + markedQuestionNumbers.reduce((prev, next) => {
+      return String(prev) + ' ' + String(next);
+  }) 
+  const permission = true;
+  if (markedQuestionNumbers.length) {
+    permission = false;
+    const userInput = prompt("Warning: You have marked " + qs + ". Enter yes to proceed and submit or go back");
+    if (userInput.toLowerCase !== 'yes') {
+      return;
+    } 
+  }
+
+
+  // clearInterval(interval);
+  // fetch("/submit-quiz", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify({ result_data: JSON.stringify(questions) }),
+  // })
+  //   .then((response) => response.json())
+  //   .then((data) => console.log(data))
+  //   .catch((error) => console.error("Error:", error));
 }
 
 function showResult(fromLastPage) {
