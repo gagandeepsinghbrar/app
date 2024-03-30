@@ -3710,15 +3710,6 @@ const mappings = {
 let questions = set1;
 renderSets();
 function renderSets() {
-
-    (() => {
-        fetch("/results")
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data);
-        })
-        .catch((error) => console.error("Error fetching quiz results:", error));
-    })();
   const examSetsDiv = document.getElementById("exam-sets");
 
   // Loop through the keys (exam sets) and create buttons
