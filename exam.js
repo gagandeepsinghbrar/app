@@ -1409,7 +1409,7 @@ function prepareAndSubmitResults() {
   const qs = 'Questions ' + markedQuestionNumbers.reduce((prev, next) => {
       return String(prev) + ' ' + String(next);
   }) 
-  const permission = true;
+  let permission = true;
   if (markedQuestionNumbers.length) {
     permission = false;
     const userInput = prompt("Warning: You have marked " + qs + ". Enter yes to proceed and submit or go back");
