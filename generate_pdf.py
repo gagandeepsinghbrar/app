@@ -68,9 +68,9 @@ def generate_pdf(id):
     data = json.loads(json.loads(json_string));
 
     logger("got data items: " + str(len(data)))
-
+    logger('before enumerate')
     for i, item in enumerate(data, 1):
-
+        
         # Extract properties from result_data
         question = item['question']
         choices = item['choices']
@@ -85,11 +85,12 @@ def generate_pdf(id):
         # Add question to the PDF content
         content.append(Paragraph(f"{markedText}Question {i}:", style=custom_heading1_style))
         content.append(Paragraph(question, style=black))
-
+        logger('appending para')
         # Add choices to the PDF content
         content.append(Spacer(1, 12))
         content.append(Paragraph("Choices:", styles['Heading1']))
         for choice in choices:
+            logger('choice')
             if choice == answer:
                 content.append(Paragraph(choice, style=green))
                 content.append(Spacer(1, 6))
