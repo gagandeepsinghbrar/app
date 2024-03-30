@@ -1407,9 +1407,7 @@ function prepareAndSubmitResults() {
         markedQuestionNumbers.push(i + 1);
       }
   })
-  const rdc = !markedQuestionNumbers.length ? '': markedQuestionNumbers.reduce((prev, next) => {
-    return String(prev) + ' ' + next ? String(next): '';
-}) 
+  const rdc = !markedQuestionNumbers.length ? '': markedQuestionNumbers.join(', ')
   const qs = 'Questions ' + rdc
   let permission = true;
   if (markedQuestionNumbers.length) {
