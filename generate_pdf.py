@@ -103,7 +103,7 @@ def generate_pdf(id):
                 content.append(Spacer(1, 12))
                 content.append(Paragraph("Answered:", styles['Heading1']))
                 content.append(Paragraph(answered, style=red))
-
+    logger('build going to start')
     # Build the PDF document
     doc.build(content)
     logger("built")

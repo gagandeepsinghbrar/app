@@ -28,10 +28,7 @@
             "Avoid consultation with the patient's physician"
         ],
         "answer": "Consult or refer the patient to another practitioner if necessary"
-    }
-]
-
-[
+    },
     {
         "question": "Who defines the standards of care or quality services in dentistry where undefined by law?",
         "choices": [
@@ -102,9 +99,7 @@
         ],
         "answer": "Inform patients of their oral health status in a justifiable manner"
     }
-]
-
-[
+,
     {
         "question": "What is the responsibility of dentists regarding patient confidentiality?",
         "choices": [
@@ -135,8 +130,7 @@
         ],
         "answer": "Whenever they suspect instances of gross and/or continual faulty treatment"
     }
-]
-[
+,
     {
         "question": "What types of media can a dentist participate in for public health education?",
         "choices": [
@@ -167,8 +161,7 @@
         ],
         "answer": "To ensure that all statements are accurate and truthful"
     }
-]
-[
+,
     {
         "question": "What obligation do dentists have regarding their representation in public?",
         "choices": [
@@ -249,9 +242,7 @@
         ],
         "answer": "Implying official sanction of dental associations without due consent"
     }
-]
-
-[
+,
     {
         "question": "What ethical concerns can arise from subjective statements about the quality of dental services?",
         "choices": [
@@ -332,9 +323,7 @@
         ],
         "answer": "Any compensation given"
     }
-]
-
-[
+,
     {
         "question": "What letter abbreviations can a dentist append to indicate successful completion of a dental educational program?",
         "choices": [
@@ -385,9 +374,7 @@
         ],
         "answer": "Arrange to refund any overpayment immediately"
     }
-]
-
-[
+,
     {
         "question": "What obligation does a dentist have regarding emergency care for patients?",
         "choices": [
@@ -408,9 +395,7 @@
         ],
         "answer": "Recommend the patient to continue treatment with the original treating dentist"
     }
-]
-
-[
+,
     {
         "question": "What obligation does a dentist have when the delivery of care to a patient requires diagnostic and therapeutic modalities beyond the dentist's scope of services?",
         "choices": [
@@ -461,9 +446,7 @@
         ],
         "answer": "When the testimony is essential to a just and fair disposition of a judicial or administrative action"
     }
-]
-
-[
+,
     {
         "question": "What is considered unethical regarding a dentist's engagement as an expert witness?",
         "choices": [
@@ -504,8 +487,7 @@
         ],
         "answer": "If the comments are made without the dentist having sufficient information to justify their truth"
     }
-]
-[
+,
     {
         "question": "What types of arrangements are considered unethical regarding fees in dentistry?",
         "choices": [
@@ -536,9 +518,7 @@
         ],
         "answer": "If the fees are not based on the number of referrals or amount of professional fees paid by the patient to the dentist"
     }
-]
-
-[
+,
     {
         "question": "What principle of ethics emphasizes the patient's right to determine what should be done with their own bodies?",
         "choices": [
@@ -589,9 +569,7 @@
         ],
         "answer": "Integrity"
     }
-]
-
-[
+,
     {
         "question": "What principle of ethics requires the dentist to diagnose and treat the patient's oral health needs?",
         "choices": [
@@ -702,9 +680,7 @@
         ],
         "answer": "To guide dentists in ethical decision-making and ensure high-quality patient care"
     }
-]
-
-[
+,
     {
         "question": "How long does a licensee have to notify the dental board of any change in their place of practice?",
         "choices": [
@@ -755,10 +731,7 @@
         ],
         "answer": "Unprofessional conduct"
     }
-]
-
-```json
-[
+,
     {
         "question": "What activities are considered 'advertising' or 'advertisement' according to the California Dental Practice Act?",
         "choices": [
@@ -799,10 +772,7 @@
         ],
         "answer": "All of the above"
     }
-]
-
-```json
-[
+,
     {
         "question": "What is considered unprofessional conduct regarding group advertising and referral services?",
         "choices": [
@@ -843,10 +813,7 @@
         ],
         "answer": "License type and academic degree of all staff members"
     }
-]
-
-```json
-[
+,
     {
         "question": "What details must be included in denture advertising?",
         "choices": [
@@ -897,10 +864,7 @@
         ],
         "answer": "Courses on workplace safety"
     }
-]
-
-```json
-[
+,
     {
         "question": "What types of courses are eligible for continuing education credit according to the California Dental Practice Act?",
         "choices": [
@@ -951,9 +915,7 @@
         ],
         "answer": "Participation in site visits related to dental auxiliary programs"
     }
-]
-```json
-[
+,
     {
         "question": "What type of courses are NOT eligible for continuing education credit according to the California Dental Practice Act?",
         "choices": [
@@ -1004,9 +966,7 @@
         ],
         "answer": "Practicing dentistry for 20 years or more and reaching the age of retirement under the federal Social Security Act"
     }
-]
-
-[
+,
     {
       "question": "How many hours of courses are required for the renewal of a General Anesthesia and Deep Sedation permit?",
       "choices": [
@@ -1057,10 +1017,7 @@
       ],
       "answer": "5%"
     }
-  ]
-  
-  ```json
-[
+,
     {
         "question": "What constitutes unprofessional conduct for a licensee regarding criminal and disciplinary proceedings?",
         "choices": [
@@ -1111,9 +1068,7 @@
         ],
         "answer": "They must be transferred as provided by law within 12 months"
     }
-]
-```json
-[
+,
     {
         "question": "What is the minimum amount of insurance coverage required per claim for a dental corporation providing security by means of insurance for claims against it by its patients?",
         "choices": [
@@ -1164,9 +1119,7 @@
         ],
         "answer": "They are sold and transferred to the corporation, its shareholders, or other eligible persons"
     }
-]
-```json
-[
+,
     {
         "question": "How do laws or rules relating to dental corporations affect a dentist's duties and responsibilities to patients?",
         "choices": [
@@ -1197,10 +1150,7 @@
         ],
         "answer": "Marking is mandatory with the patient's name, unless the patient objects"
     }
-]
-
-```json
-[
+,
     {
         "question": "What is the purpose of the disciplinary guidelines recommended by the dental board?",
         "choices": [
@@ -1230,12 +1180,7 @@
             "When material evidence is unavailable due to an ongoing criminal investigation"
         ],
         "answer": "When material evidence necessary for prosecuting or determining whether a disciplinary action would be appropriate is unavailable to the dental board due to an ongoing criminal investigation"
-    }
-]
-
-
-```json
-[
+    },
     {
         "question": "What are the requirements for advertising a discount according to California regulations?",
         "choices": [
@@ -1266,9 +1211,7 @@
         ],
         "answer": "Licensed primary care clinics"
     }
-]
-```json
-[
+,
     {
         "question": "Who may employ licensed dentists and dental auxiliaries for a period of up to 12 months after the death or incapacity of a dentist?",
         "choices": [
@@ -1299,10 +1242,7 @@
         ],
         "answer": "Only if they have a permit from the dental board"
     }
-]
-
-```json
-[
+,
     {
         "question": "What is considered unprofessional conduct in connection with insurance claims?",
         "choices": [
@@ -1333,12 +1273,7 @@
         ],
         "answer": "Through use of fraud"
     }
-]
-
-
-
-```json
-[
+,
     {
         "question": "What permit is required for a dentist to administer or order the administration of deep sedation or general anesthesia?",
         "choices": [
@@ -1419,10 +1354,7 @@
         ],
         "answer": "3"
     }
-]
-
-```json
-[
+,
     {
         "question": "What is the patient-to-recovery-staff ratio limit when patients are recovering from deep sedation or general anesthesia?",
         "choices": [
@@ -1503,8 +1435,7 @@
         ],
         "answer": "Over $10,000"
     }
-]
-[
+,
     {
         "question": "What are the requirements for license renewal for all dentists and permit holders according to the California Dental Practice Act?",
         "choices": [
@@ -1585,9 +1516,7 @@
         ],
         "answer": "Payment of license renewal fee; completion of required continuing education units."
     }
-]
-
-[
+,
     {
         "question": "What is required of licensees and permit holders regarding address changes according to the California Dental Practice Act?",
         "choices": [
@@ -1668,10 +1597,7 @@
         ],
         "answer": "Practiced dentistry in California for 20-plus years"
     }
-]
-
-```json
-[
+,
     {
         "question": "What are the criteria for dentists to apply for retired status?",
         "choices": [
@@ -1772,9 +1698,7 @@
         ],
         "answer": "Revoke the license"
     }
-]
-```json
-[
+,
     {
         "question": "What is a mobile unit defined as?",
         "choices": [
@@ -1855,9 +1779,7 @@
         ],
         "answer": "CPR"
     }
-]
-```json
-[
+,
     {
         "question": "What is the timeframe within which licensees must notify the dental board of a personal name change?",
         "choices": [
@@ -1958,10 +1880,7 @@
         ],
         "answer": "Not required"
     }
-]
-
-```json
-[
+,
     {
         "question": "What is the definition of 'oral conscious sedation'?",
         "choices": [
@@ -2082,9 +2001,7 @@
         ],
         "answer": "They can file a complaint with the dental board"
     }
-]
-```json
-[
+,
     {
         "question": "What must a dental office do to ensure the safety and integrity of patient records if they solely use electronic recordkeeping systems?",
         "choices": [
@@ -2125,9 +2042,7 @@
         ],
         "answer": "They can destroy original hard copies immediately"
     }
-]
-```json
-[
+,
     {
         "question": "What must the contracting dentist of an estate of a deceased or incapacitated dentist obtain before using the patient's dental records?",
         "choices": [
@@ -2168,8 +2083,7 @@
         ],
         "answer": "To support an appeal regarding eligibility for a public benefit program"
     }
-]```json
-[
+,
     {
         "question": "How long should dental records be kept if the patient is inactive or if the dentist ceases operations?",
         "choices": [
@@ -2210,9 +2124,7 @@
         ],
         "answer": "Altering records with intent to deceive"
     }
-]
-```json
-[
+,
     {
         "question": "What is considered unprofessional conduct regarding the communication of disciplinary action?",
         "choices": [
@@ -2253,9 +2165,7 @@
         ],
         "answer": "Refusing to treat individuals based on their race, color, or sex"
     }
-]
-```json
-[
+,
     {
         "question": "What must a licensee report to the dental board within seven (7) days?",
         "choices": [
@@ -2296,9 +2206,7 @@
         ],
         "answer": "The dental board"
     }
-]
-```json
-[
+,
     {
         "question": "For which procedures is informed consent required?",
         "choices": [
@@ -2339,9 +2247,7 @@
         ],
         "answer": "30 days"
     }
-]
-```json
-[
+,
     {
         "question": "What does 'patient of record' refer to?",
         "choices": [
@@ -2392,9 +2298,7 @@
         ],
         "answer": "Exposing emergency radiographs"
     }
-]
-```json
-[
+,
     {
         "question": "What does 'minimal sedation' refer to?",
         "choices": [
@@ -2445,9 +2349,7 @@
         ],
         "answer": "One additional personnel"
     }
-]
-```json
-[
+,
     {
         "question": "When must a licensed dentist register their place or places of practice?",
         "choices": [
@@ -2498,9 +2400,7 @@
         ],
         "answer": "A self-contained unit housing equipment used for providing dental treatment transported to and used on a temporary basis at nondental office locations"
     }
-]
-```json
-[
+,
     {
         "question": "Under what circumstances may a dentist authorize an agent to transmit a prescription?",
         "choices": [
@@ -2601,9 +2501,7 @@
         ],
         "answer": "They must be obtained from security printers approved by the Department of Justice"
     }
-]
-```json
-[
+,
     {
         "question": "Under what conditions may a dentist dispense drugs to their patients?",
         "choices": [
@@ -2684,9 +2582,7 @@
         ],
         "answer": "72-hour supply"
     }
-]
-```json
-[
+,
     {
         "question": "What is required for the construction, alteration, or repairing of dental prosthetic appliances without a written authorization?",
         "choices": [
@@ -2767,9 +2663,7 @@
         ],
         "answer": "Provide competent and necessary treatment"
     }
-]
-```json
-[
+,
     {
         "question": "What is considered unprofessional conduct regarding compensation or inducement for referrals?",
         "choices": [
@@ -2850,9 +2744,7 @@
         ],
         "answer": "Once a year"
     }
-]
-```json
-[
+,
     {
         "question": "What is considered unprofessional conduct regarding scope of practice?",
         "choices": [
@@ -2933,9 +2825,7 @@
         ],
         "answer": "The dentist must diagnose using telehealth"
     }
-]
-```json
-[
+,
     {
         "question": "What is the definition of telehealth?",
         "choices": [
@@ -2986,11 +2876,7 @@
         ],
         "answer": "The authorizing dentist's name, practice location address, and telephone number"
     }
-]
-Here is an updated array of JSON objects covering all the mentioned procedures:
-
-```json
-[
+,
     {
         "question": "Who is permitted to administer general anesthesia?",
         "choices": [
@@ -3041,9 +2927,7 @@ Here is an updated array of JSON objects covering all the mentioned procedures:
         ],
         "answer": "Dental Assistants (DA)"
     }
-]
-
-[
+,
     {
         "question": "Who is permitted to use caries detection devices and materials, automated, for gathering information for diagnosis by the dentist?",
         "choices": [
@@ -3124,11 +3008,7 @@ Here is an updated array of JSON objects covering all the mentioned procedures:
         ],
         "answer": "Both DA and RDA with direct supervision required (DD)"
     }
-]
-Here are the additional questions covering the specified procedures:
-
-```json
-[
+,
     {
         "question": "Who is permitted to perform drug identification and draw, limited to identification of appropriate medications, ampule and vial preparation, and withdrawing drugs of correct amount as verified by the supervising licensed dentist?",
         "choices": [
@@ -3199,8 +3079,7 @@ Here are the additional questions covering the specified procedures:
         ],
         "answer": "General supervision is required"
     }
-]
-[
+,
     {
         "question": "Who is permitted to take facebow transfers and bite registrations?",
         "choices": [
@@ -3301,8 +3180,7 @@ Here are the additional questions covering the specified procedures:
         ],
         "answer": "Both DA and RDA with direct supervision required (DD)"
     }
-]
-[
+,
     {
         "question": "Who is permitted to cure restorative or orthodontic materials in the operative site with a light-curing device?",
         "choices": [
@@ -3373,12 +3251,7 @@ Here are the additional questions covering the specified procedures:
         ],
         "answer": "Registered Dental Assistants (RDA) with direct supervision required (DD)"
     }
-]
-
-Here are the questions covering the specified orthodontic procedures:
-
-```json
-[
+,
     {
         "question": "Who is permitted to examine orthodontic appliances?",
         "choices": [
@@ -3450,7 +3323,7 @@ Here are the questions covering the specified orthodontic procedures:
         "answer": "Both DA and RDA with direct supervision required (DD)"
     }
 ]
-```
+
 
 
 
