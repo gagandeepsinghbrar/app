@@ -1414,7 +1414,7 @@ function prepareAndSubmitResults() {
   if (markedQuestionNumbers.length) {
     permission = false;
     const userInput = prompt("Warning: You have marked " + qs + ". Enter yes to proceed and submit or go back");
-    if (userInput.toLowerCase !== 'yes') {
+    if (!userInput || userInput.toLowerCase !== 'yes') {
       return;
     } 
   }
