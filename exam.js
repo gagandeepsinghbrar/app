@@ -1,5 +1,6 @@
 let examNotCorrupted = true;
 let unmarkedQuestionsNoPermission = false;
+
 let set1 = [
   {
       "question": "What is the recommended course of action if a dentist decides to discontinue a course of treatment for a patient?",
@@ -3709,6 +3710,15 @@ const mappings = {
 let questions = set1;
 renderSets();
 function renderSets() {
+
+    (() => {
+        fetch("/results")
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((error) => console.error("Error fetching quiz results:", error));
+    })();
   const examSetsDiv = document.getElementById("exam-sets");
 
   // Loop through the keys (exam sets) and create buttons
