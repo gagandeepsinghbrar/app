@@ -1422,17 +1422,17 @@ function prepareAndSubmitResults() {
   }
 
 
-  // clearInterval(interval);
-  // fetch("/submit-quiz", {
-  //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  //   body: JSON.stringify({ result_data: JSON.stringify(questions) }),
-  // })
-  //   .then((response) => response.json())
-  //   .then((data) => console.log(data))
-  //   .catch((error) => console.error("Error:", error));
+  clearInterval(interval);
+  fetch("/submit-quiz", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ result_data: JSON.stringify(questions) }),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error("Error:", error));
 }
 
 function showResult(fromLastPage) {
