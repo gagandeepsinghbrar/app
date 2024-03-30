@@ -98,8 +98,7 @@
             "Inform patients only if requested"
         ],
         "answer": "Inform patients of their oral health status in a justifiable manner"
-    }
-,
+    },
     {
         "question": "What is the responsibility of dentists regarding patient confidentiality?",
         "choices": [
@@ -129,8 +128,7 @@
             "Only if instructed by the previous treating dentist"
         ],
         "answer": "Whenever they suspect instances of gross and/or continual faulty treatment"
-    }
-,
+    },
     {
         "question": "What types of media can a dentist participate in for public health education?",
         "choices": [
@@ -160,8 +158,7 @@
             "To file documents without reviewing them for accuracy"
         ],
         "answer": "To ensure that all statements are accurate and truthful"
-    }
-,
+    },
     {
         "question": "What obligation do dentists have regarding their representation in public?",
         "choices": [
@@ -241,8 +238,7 @@
             "Providing partial disclosure of relevant facts"
         ],
         "answer": "Implying official sanction of dental associations without due consent"
-    }
-,
+    },
     {
         "question": "What ethical concerns can arise from subjective statements about the quality of dental services?",
         "choices": [
@@ -322,8 +318,7 @@
             "The compensation only needs to be disclosed if it exceeds a certain amount"
         ],
         "answer": "Any compensation given"
-    }
-,
+    },
     {
         "question": "What letter abbreviations can a dentist append to indicate successful completion of a dental educational program?",
         "choices": [
@@ -348,7 +343,7 @@
         "question": "What obligation does a dentist have regarding billing practices?",
         "choices": [
             "To bill for services at any rate desired by the dentist",
-            "To bill for services in a manner that is fraudulent, deceitful, or misleading",
+            "To bill for services in a manner that is not fraudulent, deceitful, or misleading",
             "To bill for services without regard for accuracy or honesty",
             "To bill for services without informing the patient"
         ],
@@ -373,8 +368,7 @@
             "Ignore the overpayment and continue with business as usual"
         ],
         "answer": "Arrange to refund any overpayment immediately"
-    }
-,
+    },
     {
         "question": "What obligation does a dentist have regarding emergency care for patients?",
         "choices": [
@@ -394,8 +388,7 @@
             "Make no recommendation regarding continuity of care"
         ],
         "answer": "Recommend the patient to continue treatment with the original treating dentist"
-    }
-,
+    },
     {
         "question": "What obligation does a dentist have when the delivery of care to a patient requires diagnostic and therapeutic modalities beyond the dentist's scope of services?",
         "choices": [
@@ -445,8 +438,7 @@
             "Never, dentists are not permitted to provide expert testimony"
         ],
         "answer": "When the testimony is essential to a just and fair disposition of a judicial or administrative action"
-    }
-,
+    },
     {
         "question": "What is considered unethical regarding a dentist's engagement as an expert witness?",
         "choices": [
@@ -486,8 +478,7 @@
             "If the comments are made without prior approval from the dental society"
         ],
         "answer": "If the comments are made without the dentist having sufficient information to justify their truth"
-    }
-,
+    },
     {
         "question": "What types of arrangements are considered unethical regarding fees in dentistry?",
         "choices": [
@@ -517,8 +508,7 @@
             "If the fees are disclosed to the patient"
         ],
         "answer": "If the fees are not based on the number of referrals or amount of professional fees paid by the patient to the dentist"
-    }
-,
+    },
     {
         "question": "What principle of ethics emphasizes the patient's right to determine what should be done with their own bodies?",
         "choices": [
@@ -568,8 +558,7 @@
             "Veracity"
         ],
         "answer": "Integrity"
-    }
-,
+    },
     {
         "question": "What principle of ethics requires the dentist to diagnose and treat the patient's oral health needs?",
         "choices": [
@@ -679,8 +668,7 @@
             "To guide dentists in ethical decision-making and ensure high-quality patient care"
         ],
         "answer": "To guide dentists in ethical decision-making and ensure high-quality patient care"
-    }
-,
+    },
     {
         "question": "How long does a licensee have to notify the dental board of any change in their place of practice?",
         "choices": [
@@ -730,8 +718,7 @@
             "Not regulated"
         ],
         "answer": "Unprofessional conduct"
-    }
-,
+    },
     {
         "question": "What activities are considered 'advertising' or 'advertisement' according to the California Dental Practice Act?",
         "choices": [
@@ -771,8 +758,7 @@
             "All of the above"
         ],
         "answer": "All of the above"
-    }
-,
+    },
     {
         "question": "What is considered unprofessional conduct regarding group advertising and referral services?",
         "choices": [
@@ -812,8 +798,7 @@
             "Length of time discounts will be honored"
         ],
         "answer": "License type and academic degree of all staff members"
-    }
-,
+    },
     {
         "question": "What details must be included in denture advertising?",
         "choices": [
@@ -863,8 +848,7 @@
             "Courses on marine biology"
         ],
         "answer": "Courses on workplace safety"
-    }
-,
+    },
     {
         "question": "What types of courses are eligible for continuing education credit according to the California Dental Practice Act?",
         "choices": [
@@ -914,8 +898,7 @@
             "Watching movies"
         ],
         "answer": "Participation in site visits related to dental auxiliary programs"
-    }
-,
+    },
     {
         "question": "What type of courses are NOT eligible for continuing education credit according to the California Dental Practice Act?",
         "choices": [
@@ -965,59 +948,57 @@
             "Practicing dentistry for 25 years"
         ],
         "answer": "Practicing dentistry for 20 years or more and reaching the age of retirement under the federal Social Security Act"
-    }
-,
-    {
-      "question": "How many hours of courses are required for the renewal of a General Anesthesia and Deep Sedation permit?",
-      "choices": [
-        "7 hours",
-        "15 hours",
-        "24 hours",
-        "35 hours"
-      ],
-      "answer": "24 hours"
     },
     {
-      "question": "Which dental auxiliary requires the highest number of continuing education units for renewal?",
-      "choices": [
-        "Registered Dental Assistant, RDA",
-        "Registered Dental Hygienists in Alternative Practice, RDHAP",
-        "Registered Dental Hygienist, RDH",
-        "Registered Dental Assistant in Extended Functions, RDAEF"
-      ],
-      "answer": "Registered Dental Hygienists in Alternative Practice, RDHAP"
+        "question": "How many hours of courses are required for the renewal of a General Anesthesia and Deep Sedation permit?",
+        "choices": [
+            "7 hours",
+            "15 hours",
+            "24 hours",
+            "35 hours"
+        ],
+        "answer": "24 hours"
     },
     {
-      "question": "For which permit renewal is additional competency required if the permit holder has a pediatric endorsement?",
-      "choices": [
-        "Oral Conscious Sedation for Adult Patients",
-        "Moderate Sedation",
-        "General Anesthesia and Deep Sedation",
-        "Orthodontic Permit"
-      ],
-      "answer": "General Anesthesia and Deep Sedation"
+        "question": "Which dental auxiliary requires the highest number of continuing education units for renewal?",
+        "choices": [
+            "Registered Dental Assistant, RDA",
+            "Registered Dental Hygienists in Alternative Practice, RDHAP",
+            "Registered Dental Hygienist, RDH",
+            "Registered Dental Assistant in Extended Functions, RDAEF"
+        ],
+        "answer": "Registered Dental Hygienists in Alternative Practice, RDHAP"
     },
     {
-      "question": "What is the exemption status for dentists renewing their license for the first time regarding continuing education requirements?",
-      "choices": [
-        "Not exempt",
-        "Exempt",
-        "Exempt only for certain permits",
-        "Exempt only if they hold another dental license"
-      ],
-      "answer": "Exempt"
+        "question": "For which permit renewal is additional competency required if the permit holder has a pediatric endorsement?",
+        "choices": [
+            "Oral Conscious Sedation for Adult Patients",
+            "Moderate Sedation",
+            "General Anesthesia and Deep Sedation",
+            "Orthodontic Permit"
+        ],
+        "answer": "General Anesthesia and Deep Sedation"
     },
     {
-      "question": "What is the maximum percentage of the licensee population that the DBC and DHBC are required to conduct random audits on each year?",
-      "choices": [
-        "2%",
-        "5%",
-        "10%",
-        "15%"
-      ],
-      "answer": "5%"
-    }
-,
+        "question": "What is the exemption status for dentists renewing their license for the first time regarding continuing education requirements?",
+        "choices": [
+            "Not exempt",
+            "Exempt",
+            "Exempt only for certain permits",
+            "Exempt only if they hold another dental license"
+        ],
+        "answer": "Exempt"
+    },
+    {
+        "question": "What is the maximum percentage of the licensee population that the DBC and DHBC are required to conduct random audits on each year?",
+        "choices": [
+            "2%",
+            "5%",
+            "10%",
+            "15%"
+        ],
+        "answer": "5%"
+    },
     {
         "question": "What constitutes unprofessional conduct for a licensee regarding criminal and disciplinary proceedings?",
         "choices": [
@@ -1033,7 +1014,7 @@
         "choices": [
             "A corporation that renders any professional services",
             "A corporation with a minimum of two shareholders",
-            "A corporation authorized to practice dentistry",
+            "A corporation authorized to render professional services, if compliant with specified regulations",
             "A corporation complying with the Moscone-Knox Professional Corporation Act"
         ],
         "answer": "A corporation authorized to render professional services, if compliant with specified regulations"
@@ -1054,7 +1035,7 @@
             "The first name of the dentist",
             "The last name of the dentist",
             "The corporation's founding date",
-            "The words 'dental corporation' or similar denotation of corporate existence"
+            "The words 'dental corporation' or wording indicating corporate existence"
         ],
         "answer": "The words 'dental corporation' or wording indicating corporate existence"
     },
@@ -1067,8 +1048,7 @@
             "They must be transferred as provided by law within 12 months"
         ],
         "answer": "They must be transferred as provided by law within 12 months"
-    }
-,
+    },
     {
         "question": "What is the minimum amount of insurance coverage required per claim for a dental corporation providing security by means of insurance for claims against it by its patients?",
         "choices": [
@@ -1092,7 +1072,7 @@
     {
         "question": "Who is jointly and severally liable for claims against a dental corporation by its patients, as per CCR 16 Section 1059?",
         "choices": [
-            "Only the employed licensed persons",
+            "All shareholders of the corporation",
             "Only the shareholders",
             "Both the shareholders and the employed licensed persons",
             "The insurance provider"
@@ -1118,8 +1098,7 @@
             "They are transferred to the disqualified person"
         ],
         "answer": "They are sold and transferred to the corporation, its shareholders, or other eligible persons"
-    }
-,
+    },
     {
         "question": "How do laws or rules relating to dental corporations affect a dentist's duties and responsibilities to patients?",
         "choices": [
@@ -1144,13 +1123,12 @@
         "question": "What is the requirement for marking complete upper or lower dentures?",
         "choices": [
             "Marking is optional and only at the patient's request",
-            "Marking is mandatory with the patient's name",
+            "Marking is mandatory with the patient's name, unless the patient objects",
             "Marking is prohibited by the Dental Practice Act",
             "Marking is required with the patient's initials"
         ],
         "answer": "Marking is mandatory with the patient's name, unless the patient objects"
-    }
-,
+    },
     {
         "question": "What is the purpose of the disciplinary guidelines recommended by the dental board?",
         "choices": [
@@ -1164,12 +1142,12 @@
     {
         "question": "When can the dental board initiate a disciplinary proceeding?",
         "choices": [
-            "Within three years after discovering the act or omission",
+            "Within three years after discovering the act or omission or within seven years after the act or omission is alleged to have occurred",
             "Within three years after the act or omission is alleged to have occurred",
             "Within seven years after discovering the act or omission",
             "Within seven years after the act or omission is alleged to have occurred"
         ],
-        "answer": "Within three years after discovering the act or omission or within seven years after the act or omission is alleged to have occurred, whichever occurs first"
+        "answer": "Within three years after discovering the act or omission or within seven years after the act or omission is alleged to have occurred"
     },
     {
         "question": "Under what circumstances does the statute of limitations not apply?",
@@ -1179,7 +1157,7 @@
             "When the complaint is received by the dental board before Jan. 1, 2005",
             "When material evidence is unavailable due to an ongoing criminal investigation"
         ],
-        "answer": "When material evidence necessary for prosecuting or determining whether a disciplinary action would be appropriate is unavailable to the dental board due to an ongoing criminal investigation"
+        "answer": "When material evidence is unavailable due to an ongoing criminal investigation"
     },
     {
         "question": "What are the requirements for advertising a discount according to California regulations?",
@@ -1196,10 +1174,10 @@
         "choices": [
             "Only to patients with insurance coverage",
             "Only to patients without insurance coverage",
-            "To any patient without insurance or not eligible for reimbursement",
+            "When patient is not eligible/entitled to insurance reimbursement",
             "To patients with any type of coverage"
         ],
-        "answer": "To any patient the provider has reasonable cause to believe is not eligible for or is not entitled to insurance reimbursement, coverage under the Medi-Cal program or coverage by a health care service plan for the health care provided"
+        "answer": "When patient is not eligible/entitled to insurance reimbursement"
     },
     {
         "question": "Which of the following entities may employ dentists and dental auxiliaries?",
@@ -1210,17 +1188,16 @@
             "Private dental practices only"
         ],
         "answer": "Licensed primary care clinics"
-    }
-,
+    },
     {
         "question": "Who may employ licensed dentists and dental auxiliaries for a period of up to 12 months after the death or incapacity of a dentist?",
         "choices": [
-            "Only the executor or administrator of the dentist's estate",
-            "Any family member of the deceased dentist",
-            "An authorized representative of the dentist or a trustee of a trust that owns the dental practice",
-            "Any non-dentist owner of the practice"
+            "An executor or administrator of a dentist’s estate",
+            "a legal guardian",
+            "conservator or authorized representative of a dentist who is deceased or incapacitated or a trustee or successor trustee of a trust that owns a deceased or incapacitated dentist’s dental practice",
+            "all of the above"
         ],
-        "answer": "An executor or administrator of a dentist’s estate, a legal guardian, conservator or authorized representative of a dentist who is deceased or incapacitated or a trustee or successor trustee of a trust that owns a deceased or incapacitated dentist’s dental practice"
+        "answer": "all of the above"
     },
     {
         "question": "What must a dental assistant who has been in continuous employment for 120 days or more complete within a year of the date of employment?",
@@ -1241,8 +1218,7 @@
             "If they file a fictitious business name statement with the county clerk"
         ],
         "answer": "Only if they have a permit from the dental board"
-    }
-,
+    },
     {
         "question": "What is considered unprofessional conduct in connection with insurance claims?",
         "choices": [
@@ -1272,8 +1248,7 @@
             "Through recommendation by a colleague"
         ],
         "answer": "Through use of fraud"
-    }
-,
+    },
     {
         "question": "What permit is required for a dentist to administer or order the administration of deep sedation or general anesthesia?",
         "choices": [
@@ -1353,8 +1328,7 @@
             "4"
         ],
         "answer": "3"
-    }
-,
+    },
     {
         "question": "What is the patient-to-recovery-staff ratio limit when patients are recovering from deep sedation or general anesthesia?",
         "choices": [
@@ -1434,8 +1408,7 @@
             "Over $20,000"
         ],
         "answer": "Over $10,000"
-    }
-,
+    },
     {
         "question": "What are the requirements for license renewal for all dentists and permit holders according to the California Dental Practice Act?",
         "choices": [
@@ -1444,7 +1417,7 @@
             "Complete 2 units of infection control and a basic life support course",
             "Complete 4 units of California law and 2 units of infection control"
         ],
-        "answer": "Complete 2 units of California law, 2 units of infection control, and a basic life support course offered by a board-approved provider as part of continuing education requirements."
+        "answer": "Complete 2 units of California law and 2 units of infection control"
     },
     {
         "question": "What is the consequence of practicing dentistry with an expired license according to the California Dental Practice Act?",
@@ -1514,9 +1487,8 @@
             "Completion of 2 units of infection control",
             "Submission of a written apology to the dental board"
         ],
-        "answer": "Payment of license renewal fee; completion of required continuing education units."
-    }
-,
+        "answer": "Payment of license renewal fee and completion of required continuing education units"
+    },
     {
         "question": "What is required of licensees and permit holders regarding address changes according to the California Dental Practice Act?",
         "choices": [
@@ -1596,8 +1568,7 @@
             "Practiced dentistry in California for 20-plus years"
         ],
         "answer": "Practiced dentistry in California for 20-plus years"
-    }
-,
+    },
     {
         "question": "What are the criteria for dentists to apply for retired status?",
         "choices": [
@@ -1697,8 +1668,7 @@
             "Grant a temporary license"
         ],
         "answer": "Revoke the license"
-    }
-,
+    },
     {
         "question": "What is a mobile unit defined as?",
         "choices": [
@@ -1778,8 +1748,7 @@
             "ACLS"
         ],
         "answer": "CPR"
-    }
-,
+    },
     {
         "question": "What is the timeframe within which licensees must notify the dental board of a personal name change?",
         "choices": [
@@ -1879,8 +1848,7 @@
             "Must provide notification within 90 days"
         ],
         "answer": "Not required"
-    }
-,
+    },
     {
         "question": "What is the definition of 'oral conscious sedation'?",
         "choices": [
@@ -2000,8 +1968,7 @@
             "They must wait indefinitely"
         ],
         "answer": "They can file a complaint with the dental board"
-    }
-,
+    },
     {
         "question": "What must a dental office do to ensure the safety and integrity of patient records if they solely use electronic recordkeeping systems?",
         "choices": [
@@ -2041,8 +2008,7 @@
             "They must share patient records with other dentists"
         ],
         "answer": "They can destroy original hard copies immediately"
-    }
-,
+    },
     {
         "question": "What must the contracting dentist of an estate of a deceased or incapacitated dentist obtain before using the patient's dental records?",
         "choices": [
@@ -2082,8 +2048,7 @@
             "For research purposes"
         ],
         "answer": "To support an appeal regarding eligibility for a public benefit program"
-    }
-,
+    },
     {
         "question": "How long should dental records be kept if the patient is inactive or if the dentist ceases operations?",
         "choices": [
@@ -2123,8 +2088,7 @@
             "Altering records with intent to deceive"
         ],
         "answer": "Altering records with intent to deceive"
-    }
-,
+    },
     {
         "question": "What is considered unprofessional conduct regarding the communication of disciplinary action?",
         "choices": [
@@ -2164,8 +2128,7 @@
             "Limiting dental treatment based on patients' age"
         ],
         "answer": "Refusing to treat individuals based on their race, color, or sex"
-    }
-,
+    },
     {
         "question": "What must a licensee report to the dental board within seven (7) days?",
         "choices": [
@@ -2205,8 +2168,7 @@
             "The dentist's colleagues"
         ],
         "answer": "The dental board"
-    }
-,
+    },
     {
         "question": "For which procedures is informed consent required?",
         "choices": [
@@ -2246,8 +2208,7 @@
             "Indefinitely"
         ],
         "answer": "30 days"
-    }
-,
+    },
     {
         "question": "What does 'patient of record' refer to?",
         "choices": [
@@ -2297,8 +2258,7 @@
             "Conducting surgical procedures"
         ],
         "answer": "Exposing emergency radiographs"
-    }
-,
+    },
     {
         "question": "What does 'minimal sedation' refer to?",
         "choices": [
@@ -2348,8 +2308,7 @@
             "At least three additional personnel"
         ],
         "answer": "One additional personnel"
-    }
-,
+    },
     {
         "question": "When must a licensed dentist register their place or places of practice?",
         "choices": [
@@ -2399,8 +2358,7 @@
             "A unit for maintaining dental instruments"
         ],
         "answer": "A self-contained unit housing equipment used for providing dental treatment transported to and used on a temporary basis at nondental office locations"
-    }
-,
+    },
     {
         "question": "Under what circumstances may a dentist authorize an agent to transmit a prescription?",
         "choices": [
@@ -2500,8 +2458,7 @@
             "They must be obtained from the dental board"
         ],
         "answer": "They must be obtained from security printers approved by the Department of Justice"
-    }
-,
+    },
     {
         "question": "Under what conditions may a dentist dispense drugs to their patients?",
         "choices": [
@@ -2581,8 +2538,7 @@
             "96-hour supply"
         ],
         "answer": "72-hour supply"
-    }
-,
+    },
     {
         "question": "What is required for the construction, alteration, or repairing of dental prosthetic appliances without a written authorization?",
         "choices": [
@@ -2662,8 +2618,7 @@
             "Avoid delivering any treatment"
         ],
         "answer": "Provide competent and necessary treatment"
-    }
-,
+    },
     {
         "question": "What is considered unprofessional conduct regarding compensation or inducement for referrals?",
         "choices": [
@@ -2743,8 +2698,7 @@
             "Once a year"
         ],
         "answer": "Once a year"
-    }
-,
+    },
     {
         "question": "What is considered unprofessional conduct regarding scope of practice?",
         "choices": [
@@ -2824,8 +2778,7 @@
             "The dentist must diagnose using telehealth"
         ],
         "answer": "The dentist must diagnose using telehealth"
-    }
-,
+    },
     {
         "question": "What is the definition of telehealth?",
         "choices": [
@@ -2875,8 +2828,7 @@
             "The procedure codes for the treatment"
         ],
         "answer": "The authorizing dentist's name, practice location address, and telephone number"
-    }
-,
+    },
     {
         "question": "Who is permitted to administer general anesthesia?",
         "choices": [
@@ -2926,8 +2878,7 @@
             "Both DA and RDA with direct supervision required (DD)"
         ],
         "answer": "Dental Assistants (DA)"
-    }
-,
+    },
     {
         "question": "Who is permitted to use caries detection devices and materials, automated, for gathering information for diagnosis by the dentist?",
         "choices": [
@@ -2973,7 +2924,7 @@
         "choices": [
             "Dentists",
             "Dental Assistants (DA)",
-            "Registered Dental Assistants (RDA)",
+            "Registered Dental Assistants (RDA) with direct supervision required (DD)",
             "Both DA and RDA with direct supervision required (DD)"
         ],
         "answer": "Registered Dental Assistants (RDA) with direct supervision required (DD)"
@@ -3007,8 +2958,7 @@
             "Both DA and RDA with direct supervision required (DD)"
         ],
         "answer": "Both DA and RDA with direct supervision required (DD)"
-    }
-,
+    },
     {
         "question": "Who is permitted to perform drug identification and draw, limited to identification of appropriate medications, ampule and vial preparation, and withdrawing drugs of correct amount as verified by the supervising licensed dentist?",
         "choices": [
@@ -3064,22 +3014,11 @@
         "choices": [
             "Dentists",
             "Dental Assistants (DA)",
-            "Registered Dental Assistants (RDA)",
+            "Registered Dental Assistants (RDA) with direct supervision required (DD)",
             "Both DA and RDA with direct supervision required (DD)"
         ],
         "answer": "Registered Dental Assistants (RDA) with direct supervision required (DD)"
     },
-    {
-        "question": "Who can perform extra-oral duties or procedures specified by the supervising licensed dentist, provided that these duties or procedures meet the definition of a basic supportive procedure specified in Section 1750?",
-        "choices": [
-            "Dentists",
-            "Dental Assistants (DA)",
-            "Registered Dental Assistants (RDA)",
-            "Both DA and RDA with direct supervision required (DD)"
-        ],
-        "answer": "General supervision is required"
-    }
-,
     {
         "question": "Who is permitted to take facebow transfers and bite registrations?",
         "choices": [
@@ -3098,24 +3037,24 @@
             "Registered Dental Assistants (RDA)",
             "Both DA and RDA with direct supervision required (DD)"
         ],
-        "answer": "Both DA and RDA with direct supervision required (DD) in certain settings"
+        "answer": "Both DA and RDA with direct supervision required (DD)"
     },
     {
         "question": "Who is permitted to take final impressions for tooth-borne, removable prosthesis?",
         "choices": [
             "Dentists",
             "Dental Assistants (DA)",
-            "Registered Dental Assistants (RDA)",
+            "Registered Dental Assistants (RDA) with direct supervision",
             "Both DA and RDA with direct supervision required (DD)"
         ],
-        "answer": "Registered Dental Assistants (RDA) with direct supervision required (DD)"
+        "answer": "Registered Dental Assistants (RDA) with direct supervision"
     },
     {
         "question": "Who can take final impressions for permanent indirect restorations?",
         "choices": [
             "Dentists",
             "Dental Assistants (DA)",
-            "Registered Dental Assistants (RDA)",
+            "Registered Dental Assistants (RDA) with direct supervision required (DD)",
             "Both DA and RDA with direct supervision required (DD)"
         ],
         "answer": "Registered Dental Assistants (RDA) with direct supervision required (DD)"
@@ -3139,16 +3078,6 @@
             "Both DA and RDA with direct supervision required (DD)"
         ],
         "answer": "Registered Dental Assistants (RDA)"
-    },
-    {
-        "question": "Who is permitted to perform intraoral retraction and suctioning?",
-        "choices": [
-            "Dentists",
-            "Dental Assistants (DA)",
-            "Registered Dental Assistants (RDA)",
-            "Both DA and RDA with direct supervision required (DD)"
-        ],
-        "answer": "General supervision is required"
     },
     {
         "question": "Who can remove an intravenous line?",
@@ -3179,8 +3108,7 @@
             "Both DA and RDA with direct supervision required (DD)"
         ],
         "answer": "Both DA and RDA with direct supervision required (DD)"
-    }
-,
+    },
     {
         "question": "Who is permitted to cure restorative or orthodontic materials in the operative site with a light-curing device?",
         "choices": [
@@ -3249,9 +3177,8 @@
             "Registered Dental Assistants (RDA)",
             "Both DA and RDA with direct supervision required (DD)"
         ],
-        "answer": "Registered Dental Assistants (RDA) with direct supervision required (DD)"
-    }
-,
+        "answer": "Registered Dental Assistants (RDA)"
+    },
     {
         "question": "Who is permitted to examine orthodontic appliances?",
         "choices": [
@@ -3321,9 +3248,435 @@
             "Both DA and RDA with direct supervision required (DD)"
         ],
         "answer": "Both DA and RDA with direct supervision required (DD)"
+    },
+    {
+        "question": "What level of supervision is required for administering local anesthesia?",
+        "choices": [
+            "Direct supervision by a dentist",
+            "General supervision by a dentist not physically present",
+            "Supervision without examination from a dentist",
+            "No supervision required"
+        ],
+        "answer": "Direct supervision by a dentist"
+    },
+    {
+        "question": "Who can place and remove ligature ties and archwires under general supervision?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "None of the above"
+        ],
+        "answer": "RDH"
+    },
+    {
+        "question": "Which category of dental hygienist can place bases, liners, and bonding agents?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can take facebow transfers and bite registrations under general supervision?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "None of the above"
+        ],
+        "answer": "None of the above"
+    },
+    {
+        "question": "Which dental hygienist can apply and activate bleaching agents using a non-laser light-curing device?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who is authorized to chemically prepare teeth for bonding?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Which category of dental hygienist can use automated caries detection devices to gather information for diagnosis by the dentist?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can remove excess cement on surfaces of teeth with an ultrasonic scaler?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can obtain intraoral images for computer-aided design, milled restorations?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Which duty can be performed by RDHEF under direct supervision?",
+        "choices": [
+            "Cord retraction of gingiva for impression procedures",
+            "Adjusting extra-orally dentures",
+            "Soft tissue curettage",
+            "Placing periodontal dressings"
+        ],
+        "answer": "Cord retraction of gingiva for impression procedures"
+    },
+    {
+        "question": "Who can place periodontal dressings without supervision?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "None of the above"
+        ],
+        "answer": "RDHAP"
+    },
+    {
+        "question": "Who can remove periodontal and post-extraction dressings after inspection by the supervising dentist?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can fit trial endodontic filling points under direct supervision?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "None of the above"
+        ],
+        "answer": "RDHEF"
+    },
+    {
+        "question": "Who can dry endodontically treated canals using absorbent paper points?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Which category of dental hygienist can perform preliminary exams, including periodontal charting and myofunctional evaluation, under general supervision?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "None of the above"
+        ],
+        "answer": "RDH"
+    },
+    {
+        "question": "Who can perform extra-oral duties or procedures specified by the supervising licensed dentist under general supervision?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can take impressions for bleaching trays and placement of in-office tooth whitening devices?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can apply fluoride in a public health program created by federal, state, or local law?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "None of the above"
+        ],
+        "answer": "RDHAP"
+    },
+    {
+        "question": "Who can take final impressions for cast restorations under direct supervision?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "RDHEF"
+    },
+    {
+        "question": "Who can apply hygiene preventive services in a public health program created by federal, state, or local law?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "None of the above"
+        ],
+        "answer": "RDHAP"
+    },
+    {
+        "question": "Who is authorized to take intraoral impressions for all nonprosthodontic appliances?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can take intraoral impressions for space maintainers, orthodontic appliances, and guards under direct supervision?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "None of the above"
+        ],
+        "answer": "RDHEF"
+    },
+    {
+        "question": "Who can place an Interim Therapeutic Restoration (ITR) after the diagnosis and direction of a dentist in a telehealth connected dental team?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can irrigate subgingivally with antimicrobial and/or antibiotic liquid solutions under general supervision?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can place and remove ligature ties and archwires under direct supervision?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can use a non-laser light-curing device to activate bleaching agent?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can cure restorative or orthodontic materials in the operative site with a light-curing device?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can place bases, liners, and bonding agents?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can place, wedge, and remove matrices for restorative procedures?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who is authorized to place patient monitoring sensors?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can perform mouth-mirror inspection of the oral cavity, including charting of obvious lesions, existing restorations, and missing teeth under general supervision?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who is authorized to administer nitrous oxide and oxygen, whether alone or in combination with each other, after completing a DHCC-approved course?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can perform oral exfoliative cytology under general supervision?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "None of the above"
+        ],
+        "answer": "RDH"
+    },
+    {
+        "question": "Who can perform oral health screenings?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "None of the above"
+        ],
+        "answer": "None of the above"
+    },
+    {
+        "question": "Who can examine orthodontic appliances?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can perform orthodontic measurements for the purposes of orthodontic treatment?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can place and remove orthodontic separators?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can perform intraoral and extraoral photography under general supervision?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "None of the above"
+        ],
+        "answer": "RDH"
+    },
+    {
+        "question": "Who can monitor patients undergoing sedation, limited to reading and transmitting information from the monitor display during the intraoperative phase of surgery for various parameters?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who can perform soft tissue curettage after completing a DHCC-approved course?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "None of the above"
+        ],
+        "answer": "RDH"
+    },
+    {
+        "question": "Who can remove sutures after inspection of the site by the dentist?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Who is authorized to apply non-aerosol and non-caustic topical agents?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "None of the above"
+        ],
+        "answer": "None of the above"
+    },
+    {
+        "question": "Who can apply topical, therapeutic, and subgingival agents for the control of caries and periodontal disease?",
+        "choices": [
+            "RDH",
+            "RDHEF",
+            "RDHAP",
+            "All of the above"
+        ],
+        "answer": "All of the above"
     }
 ]
-
-
-
-
