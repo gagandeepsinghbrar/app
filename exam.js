@@ -1,4 +1,5 @@
-const examNotCorrupted = true;
+let examNotCorrupted = true;
+let unmarkedQuestionsNoPermission = false;
 const questions = [
   {
     question:
@@ -1415,8 +1416,11 @@ function prepareAndSubmitResults() {
     permission = false;
     const userInput = prompt("Warning: You have marked " + qs + ". Enter yes to proceed and submit or go back");
     if (!userInput || userInput.toLowerCase !== 'yes') {
+      unmarkedQuestionsNoPermission = true;
       return;
-    } 
+    } else {
+      unmarkedQuestionsNoPermission = false;
+    }
   }
 
 
@@ -1449,7 +1453,7 @@ function scorableQuestions() {
 }
 
 function showScore() {
-  if (!ranOutOfTime && !allAnswered) {
+  if (unmarkedQuestionsNoPermission || (!ranOutOfTime && !allAnswered)) {
     return;
   }
   document.getElementById("quiz-container").style.display = "none";
@@ -1532,6 +1536,7 @@ function markQuestion() {
     document.getElementById("mark-icon").style.visibility = "hidden";
   } else {
     questionObj.marked = true;
+    unmarkedQuestionsNoPermission = false;
     renderMarkerIfNeeded();
   }
 }
