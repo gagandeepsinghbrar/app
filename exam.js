@@ -1406,9 +1406,10 @@ function prepareAndSubmitResults() {
         markedQuestionNumbers.push(i + 1);
       }
   })
-  const qs = 'Questions ' + markedQuestionNumbers.reduce((prev, next) => {
-      return String(prev) + ' ' + String(next);
-  }) 
+  const rdc = markedQuestionNumbers.length ? '': markedQuestionNumbers.reduce((prev, next) => {
+    return String(prev) + ' ' + next ? String(next): '';
+}) 
+  const qs = 'Questions ' + rdc
   let permission = true;
   if (markedQuestionNumbers.length) {
     permission = false;
@@ -1568,3 +1569,15 @@ if (examNotCorrupted) {
   displayQuestion(true);
   startTimer(timer);
 }
+
+
+/*
+
+automation 
+
+setInterval(() => {
+    document.querySelectorAll('#choices label input')[0].click()
+document.querySelector('#next').click()
+}, 500)
+
+*/
