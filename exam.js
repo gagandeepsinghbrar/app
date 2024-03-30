@@ -1407,7 +1407,7 @@ function prepareAndSubmitResults() {
         markedQuestionNumbers.push(i + 1);
       }
   })
-  const rdc = markedQuestionNumbers.length ? '': markedQuestionNumbers.reduce((prev, next) => {
+  const rdc = !markedQuestionNumbers.length ? '': markedQuestionNumbers.reduce((prev, next) => {
     return String(prev) + ' ' + next ? String(next): '';
 }) 
   const qs = 'Questions ' + rdc
