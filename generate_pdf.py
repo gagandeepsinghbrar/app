@@ -42,8 +42,7 @@ def fetch_quiz_results(id):
 
     return result_data
 
-def generate_pdf(id):
-
+def generate_pdf(id, get_wrong):
 
 
     results_data = fetch_quiz_results(id)
@@ -79,26 +78,55 @@ def generate_pdf(id):
             marked = None
         success = answered == answer
         markedText = "(M) " if marked else ""
-        # Add question to the PDF content
-        content.append(Paragraph(f"{markedText}Question {i}:", style=custom_heading1_style))
-        content.append(Paragraph(question, style=black))
-        # Add choices to the PDF content
-        content.append(Spacer(1, 12))
-        content.append(Paragraph("Choices:", styles['Heading1']))
-        for choice in choices:
-            if choice == answer:
-                content.append(Paragraph(choice, style=green))
-                content.append(Spacer(1, 6))
-            else:
-                content.append(Paragraph(choice, style=black))
-                content.append(Spacer(1, 6))
-        
-        if not success:
-            # Add answered to the PDF content if available
-            if answered:
+
+
+
+        if get_wrong:
+            if not success:
+                content.append(Paragraph(f"{markedText}Question {i}:", style=custom_heading1_style))
+                content.append(Paragraph(question, style=black))
+                # Add choices to the PDF content
                 content.append(Spacer(1, 12))
-                content.append(Paragraph("Answered:", styles['Heading1']))
-                content.append(Paragraph(answered, style=red))
+                content.append(Paragraph("Choices:", styles['Heading1']))
+                for choice in choices:
+                    if choice == answer:
+                        content.append(Paragraph(choice, style=green))
+                        content.append(Spacer(1, 6))
+                    else:
+                        content.append(Paragraph(choice, style=black))
+                        content.append(Spacer(1, 6))
+                
+                # Add answered to the PDF content if available
+                if answered:
+                    content.append(Spacer(1, 12))
+                    content.append(Paragraph("Answered:", styles['Heading1']))
+                    content.append(Paragraph(answered, style=red))
+        else:
+
+            # Add question to the PDF content
+            content.append(Paragraph(f"{markedText}Question {i}:", style=custom_heading1_style))
+            content.append(Paragraph(question, style=black))
+            # Add choices to the PDF content
+            content.append(Spacer(1, 12))
+            content.append(Paragraph("Choices:", styles['Heading1']))
+            for choice in choices:
+                if choice == answer:
+                    content.append(Paragraph(choice, style=green))
+                    content.append(Spacer(1, 6))
+                else:
+                    content.append(Paragraph(choice, style=black))
+                    content.append(Spacer(1, 6))
+            
+            if not success:
+                # Add answered to the PDF content if available
+                if answered:
+                    content.append(Spacer(1, 12))
+                    content.append(Paragraph("Answered:", styles['Heading1']))
+                    content.append(Paragraph(answered, style=red))
+
+
+
+
     # Build the PDF document
     doc.build(content)
     pdf_data = buffer.getvalue()
@@ -108,6 +136,7 @@ def generate_pdf(id):
 if __name__ == "__main__":
     # Read the command-line argument passed to the script
     argument = sys.argv[1] if len(sys.argv) > 1 else None
-    pdf_content = generate_pdf(argument)
+    get_wrong = sys.argv[2] if len(sys.argv) > 2 else None
+    pdf_content = generate_pdf(argument, get_wrong)
     sys.stdout.buffer.write(pdf_content)
     sys.stdout.flush()
