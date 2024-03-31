@@ -52,10 +52,14 @@ const baseURL = "http://localhost:3000"; // Define the base URL
 
 app.get("/generate_pdf/:id", (req, res) => {
   const id = req.params.id;
+  const getWrong = req.query.getWrong;
   // Command to execute the Python script
   const pythonScript = "generate_pdf.py";
 
   const args = [id];
+  if (getWrong) {
+    args.push('get_wrong')
+  }
 
   // Spawn the Python script as a child process
   const pythonProcess = spawn("python3", [pythonScript, ...args]);
